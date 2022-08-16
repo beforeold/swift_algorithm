@@ -37,4 +37,18 @@ let _888 = head?.next
 Solution.deleteNode(_888)
 print(Helper.printedAsList(head))
 
+let node0 = ListNode(val: 0, next: nil)
+let node1 = ListNode(val: 1, next: nil)
+let node2 = ListNode(val: 2, next: nil)
+let node3 = ListNode(val: 3, next: nil)
+let node4 = ListNode(val: 4, next: nil)
+node0.next = node1
+node1.next = node2
+node2.next = node3
+node3.next = node4
+//node4.next = node1
+
+print(Solution.hasCycle(node0))
+
+
 
