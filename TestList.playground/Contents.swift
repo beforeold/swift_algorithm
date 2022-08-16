@@ -14,3 +14,8 @@ link.remove(1)
 assert(link.getSize() == 1)
 assert(link.getElement(0) == 5)
 
+let node = Helper.buildList(from: [2, 3, 4, 5])
+Helper.printedAsList(node)
+
+let reversed = Solution.reverseList(node)
+Helper.printedAsList(reversed)
