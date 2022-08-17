@@ -127,4 +127,16 @@ public class Solution {
         head?.next = removeElements3(head?.next, val)
         return head?.val == val ? head?.next : head
     }
+    
+    /// 删除排序链表中的重复元素
+    /// https://leetcode.cn/problems/remove-duplicates-from-sorted-list/
+    /// 递归
+    public static func deleteDuplicates(_ head: ListNode?) -> ListNode? {
+        if head == nil {
+            return head
+        }
+        
+        head?.next = deleteDuplicates(head?.next)
+        return head?.val == head?.next?.val ? head?.next : head
+    }
 }
