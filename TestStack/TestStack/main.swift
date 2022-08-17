@@ -7,5 +7,14 @@
 
 import Foundation
 
-print("Hello, World!")
+let stack = Stack<Int>()
 
+let count = 5
+
+for i in 0..<count {
+    stack.push(i)
+}
+
+for _ in 0..<count {
+    print(stack.pop())
+}
