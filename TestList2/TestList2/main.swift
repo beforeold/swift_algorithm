@@ -78,10 +78,16 @@ func testDeleteDuplicateElements(_ foo: (ListNode?) -> ListNode?) {
     print("ret3", Helper.printedAsList(ret3))
 }
 
+Helper.printSep()
 testRemoveElements(Solution.removeElements)
+Helper.printSep()
 testRemoveElements(Solution.removeElements2)
+Helper.printSep()
 testRemoveElements(Solution.removeElements3)
 
+Helper.printSep()
 testDeleteDuplicateElements(Solution.deleteDuplicates)
+Helper.printSep()
+testDeleteDuplicateElements(Solution.deleteDuplicates2)
 
 

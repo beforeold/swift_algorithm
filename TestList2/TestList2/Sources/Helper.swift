@@ -35,4 +35,8 @@ public class Helper {
         
         return first
     }
+    
+    static func printSep() {
+        print("------------------------------------------")
+    }
 }

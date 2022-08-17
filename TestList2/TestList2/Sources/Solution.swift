@@ -2,6 +2,7 @@ import Foundation
 
 
 public class Solution {
+    // MARK: - reverseList
     /// leetcode 反转链表
     /// https://leetcode.cn/problems/reverse-linked-list-ii/
     /// 递归方法
@@ -42,6 +43,7 @@ public class Solution {
         return newHead
     }
     
+    // MARK: - deleteNode
     /// leet code 删除链表节点
     /// https://leetcode.cn/problems/delete-node-in-a-linked-list/
     /// 核心是不移动 node，而是移动 node 的数据
@@ -50,6 +52,7 @@ public class Solution {
         node?.next = node?.next?.next
     }
     
+    // MARK: - hasCycle
     /// leetcode 环形链表
     /// https://leetcode.cn/problems/linked-list-cycle/
     /// 核心是利用快慢指针，判断是否有相遇，直到结束
@@ -73,6 +76,7 @@ public class Solution {
         return false
     }
     
+    // MARK: - removeElements
     /// leetcode 删除链表节点
     /// https://leetcode.cn/problems/remove-linked-list-elements/
     /// 移动节点删除
@@ -128,6 +132,8 @@ public class Solution {
         return head?.val == val ? head?.next : head
     }
     
+    // MARK: - deleteDuplicates
+    
     /// 删除排序链表中的重复元素
     /// https://leetcode.cn/problems/remove-duplicates-from-sorted-list/
     /// 递归
@@ -138,5 +144,28 @@ public class Solution {
         
         head?.next = deleteDuplicates(head?.next)
         return head?.val == head?.next?.val ? head?.next : head
+    }
+    
+    /// 删除排序链表中的重复元素
+    /// https://leetcode.cn/problems/remove-duplicates-from-sorted-list/
+    /// 递归
+    public static func deleteDuplicates2(_ head: ListNode?) -> ListNode? {
+        if head == nil {
+            return head
+        }
+        
+        let dummyHead = ListNode()
+        dummyHead.next = head
+        
+        var cur: ListNode? = dummyHead
+        while (cur?.next != nil) {
+            if cur?.val == cur?.next?.val {
+                cur?.next = cur?.next?.next
+            } else {
+                cur = cur?.next
+            }
+        }
+        
+        return dummyHead.next
     }
 }
