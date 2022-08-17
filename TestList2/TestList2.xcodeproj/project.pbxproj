@@ -54,7 +54,9 @@
 				94572FCF28ABD82E00434D5B /* TestList2 */,
 				94572FCE28ABD82E00434D5B /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		94572FCE28ABD82E00434D5B /* Products */ = {
 			isa = PBXGroup;
