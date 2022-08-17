@@ -187,14 +187,11 @@ public class Solution {
         // reset to head
         cur = head
         let targetIndex = count / 2
-        for i in 0..<count {
-            if i == targetIndex {
-                return cur
-            }
+        for _ in 0..<targetIndex {
             cur = cur?.next
         }
         
-        return nil
+        return cur
     }
     
     /// 链表的中间节点
