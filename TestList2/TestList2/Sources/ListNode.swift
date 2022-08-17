@@ -16,3 +16,15 @@ public class ListNode {
         self.next = next
     }
 }
+
+extension ListNode: CustomStringConvertible {
+    public var description: String {
+        let nextDesc: String
+        if let next = next {
+            nextDesc = "\(next.val)"
+        } else {
+            nextDesc = "null"
+        }
+        return "\(val)_\(nextDesc)"
+    }
+}

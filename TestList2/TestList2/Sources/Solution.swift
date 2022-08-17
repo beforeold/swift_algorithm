@@ -168,4 +168,51 @@ public class Solution {
         
         return dummyHead.next
     }
+    
+    /// 链表的中间节点
+    /// https://leetcode.cn/problems/middle-of-the-linked-list/
+    /// 1 -> 0; 2 -> 1; 3 -> 1, 4 -> 2; 5 -> 2
+    public static func middleNode(_ head: ListNode?) -> ListNode? {
+        if head == nil {
+            return head
+        }
+        
+        var count = 0
+        var cur = head
+        while (cur != nil) {
+            cur = cur?.next
+            count += 1
+        }
+        
+        // reset to head
+        cur = head
+        let targetIndex = count / 2
+        for i in 0..<count {
+            if i == targetIndex {
+                return cur
+            }
+            cur = cur?.next
+        }
+        
+        return nil
+    }
+    
+    /// 链表的中间节点
+    /// https://leetcode.cn/problems/middle-of-the-linked-list/
+    /// 1 -> 0; 2 -> 1; 3 -> 1, 4 -> 2; 5 -> 2
+    public static func middleNode2(_ head: ListNode?) -> ListNode? {
+        if head == nil {
+            return head
+        }
+        
+        var slow = head
+        var fast = head?.next
+        
+        while (fast != nil || fast?.next != nil) {
+            slow = slow?.next
+            fast = fast?.next?.next
+        }
+        
+        return slow
+    }
 }

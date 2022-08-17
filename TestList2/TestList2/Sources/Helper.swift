@@ -3,6 +3,10 @@ import Foundation
 
 public class Helper {
     public static func printedAsList(_ node: ListNode?) -> String {
+        if node == nil {
+            return "null"
+        }
+        
         var node = node
         var string = ""
         string += "["
@@ -36,7 +40,7 @@ public class Helper {
         return first
     }
     
-    static func printSep() {
-        print("------------------------------------------")
+    static func printSep(_ msg: String = "") {
+        print("--------- \(msg) ---------------------------------")
     }
 }
