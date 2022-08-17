@@ -50,5 +50,22 @@ node3.next = node4
 
 print(Solution.hasCycle(node0))
 
+func testRemoveElements(_ foo: (ListNode?, Int) -> ListNode?) {
+    let list1 = Helper.buildList(from: [1,2,6,3,4,5,6])
+    let ret1 = foo(list1, 6)
+    print("ret1", Helper.printedAsList(ret1))
+    
+    let list2 = Helper.buildList(from: [])
+    let ret2 = foo(list2, 6)
+    print("ret2", Helper.printedAsList(ret2))
+    
+    let list3 = Helper.buildList(from: [7, 7, 7, 7])
+    let ret3 = foo(list3, 7)
+    print("ret3", Helper.printedAsList(ret3))
+}
+
+testRemoveElements(Solution.removeElements)
+testRemoveElements(Solution.removeElements2)
+testRemoveElements(Solution.removeElements3)
 
 

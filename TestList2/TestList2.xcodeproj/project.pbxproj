@@ -67,8 +67,8 @@
 		94572FCF28ABD82E00434D5B /* TestList2 */ = {
 			isa = PBXGroup;
 			children = (
-				94572FF828ABD8EB00434D5B /* Sources */,
 				94572FD028ABD82E00434D5B /* main.swift */,
+				94572FF828ABD8EB00434D5B /* Sources */,
 			);
 			path = TestList2;
 			sourceTree = "<group>";

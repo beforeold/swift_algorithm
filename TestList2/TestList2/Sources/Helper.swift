@@ -5,12 +5,16 @@ public class Helper {
     public static func printedAsList(_ node: ListNode?) -> String {
         var node = node
         var string = ""
-        
+        string += "["
         while node != nil {
-            string += "\(node?.val ?? 0), "
+            string += "\(node?.val ?? 0)"
+            if node?.next != nil {
+                string += ", "
+            }
             node = node?.next
         }
         
+        string += "]"
         return string
     }
     

@@ -72,4 +72,59 @@ public class Solution {
         
         return false
     }
+    
+    /// leetcode 删除链表节点
+    /// https://leetcode.cn/problems/remove-linked-list-elements/
+    /// 移动节点删除
+    static func removeElements(_ head: ListNode?, _ val: Int) -> ListNode? {
+        let dummyHead = ListNode()
+        dummyHead.next = head
+        
+        var prev: ListNode? = dummyHead
+        var cur = prev?.next
+        
+        while (cur != nil) {
+            if cur?.val == val {
+                prev?.next = cur?.next
+                cur = cur?.next
+            } else {
+                prev = cur
+                cur = cur?.next
+            }
+        }
+        
+        return dummyHead.next
+    }
+    
+    /// leetcode 删除链表节点
+    /// https://leetcode.cn/problems/remove-linked-list-elements/
+    ///  修改节点内容删除，注意是使用 next 来进行判断，而不是 cur，否则会导致结尾时无法删除自身
+    static func removeElements2(_ head: ListNode?, _ val: Int) -> ListNode? {
+        let dummyHead = ListNode()
+        dummyHead.next = head
+        
+        var cur: ListNode? = dummyHead
+        while (cur?.next != nil) {
+            if (cur?.next?.val == val) {
+                cur?.next = cur?.next?.next
+                
+            } else {
+                cur = cur?.next
+            }
+        }
+        
+        return dummyHead.next
+    }
+    
+    /// leetcode 删除链表节点
+    /// https://leetcode.cn/problems/remove-linked-list-elements/
+    ///  递归
+    static func removeElements3(_ head: ListNode?, _ val: Int) -> ListNode? {
+        if head == nil {
+            return head
+        }
+        
+        head?.next = removeElements3(head?.next, val)
+        return head?.val == val ? head?.next : head
+    }
 }
