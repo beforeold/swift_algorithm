@@ -23,4 +23,18 @@ public class Stack<E> {
     public func size() -> Int {
         return elements.count
     }
+    
+    public func isEmpty() -> Bool {
+        return elements.count == 0
+    }
+    
+    public func clear() {
+        elements = []
+    }
+}
+
+extension Stack: CustomStringConvertible {
+    public var description: String {
+        return "top -> \(Array(elements.reversed()))"
+    }
 }

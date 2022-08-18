@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9457302928AD00B400434D5B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9457302828AD00B400434D5B /* main.swift */; };
 		9457303028AD00BB00434D5B /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9457302F28AD00BB00434D5B /* Stack.swift */; };
+		9457304728ADDA6900434D5B /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9457304628ADDA6900434D5B /* Solution.swift */; };
+		9457304928ADDDDC00434D5B /* Browser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9457304828ADDDDC00434D5B /* Browser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +29,8 @@
 		9457302528AD00B400434D5B /* TestStack */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestStack; sourceTree = BUILT_PRODUCTS_DIR; };
 		9457302828AD00B400434D5B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		9457302F28AD00BB00434D5B /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		9457304628ADDA6900434D5B /* Solution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution.swift; sourceTree = "<group>"; };
+		9457304828ADDDDC00434D5B /* Browser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Browser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 			children = (
 				9457302828AD00B400434D5B /* main.swift */,
 				9457302F28AD00BB00434D5B /* Stack.swift */,
+				9457304628ADDA6900434D5B /* Solution.swift */,
+				9457304828ADDDDC00434D5B /* Browser.swift */,
 			);
 			path = TestStack;
 			sourceTree = "<group>";
@@ -123,8 +129,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9457304928ADDDDC00434D5B /* Browser.swift in Sources */,
 				9457303028AD00BB00434D5B /* Stack.swift in Sources */,
 				9457302928AD00B400434D5B /* main.swift in Sources */,
+				9457304728ADDA6900434D5B /* Solution.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

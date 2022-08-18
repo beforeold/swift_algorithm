@@ -50,7 +50,9 @@
 				9457300E28ACF7B100434D5B /* TestBinarySearchTree */,
 				9457300D28ACF7B100434D5B /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		9457300D28ACF7B100434D5B /* Products */ = {
 			isa = PBXGroup;

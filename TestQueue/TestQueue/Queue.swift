@@ -7,22 +7,30 @@
 
 import Foundation
 
-class Queue<E> {
+public class Queue<E> {
     private var elements = [E]()
     
-    func push(_ element: E) {
+    public func push(_ element: E) {
         elements.append(element)
     }
     
-    func pop() -> E {
+    public func pop() -> E {
         return elements.removeFirst()
     }
     
-    func peek() -> E? {
+    public func peek() -> E? {
         return elements.first
     }
     
-    func size() -> Int {
+    public func size() -> Int {
         return elements.count
+    }
+    
+    public func isEmpty() -> Bool {
+        return elements.count == 0
+    }
+    
+    public func clear() {
+        elements = []
     }
 }

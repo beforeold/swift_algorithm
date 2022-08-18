@@ -18,3 +18,5 @@ for i in 0..<count {
 for _ in 0..<count {
     print(stack.pop())
 }
+
+Solution.browser()
