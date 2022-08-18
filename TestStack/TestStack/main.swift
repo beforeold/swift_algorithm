@@ -7,40 +7,49 @@
 
 import Foundation
 
-let stack = Stack<Int>()
+func testStack() {
+    let stack = Stack<Int>()
 
-let count = 5
+    let count = 5
 
-for i in 0..<count {
-    stack.push(i)
-}
+    for i in 0..<count {
+        stack.push(i)
+    }
 
-for _ in 0..<count {
-    print(stack.pop())
-}
-
-public extension CustomStringConvertible {
-    func printed() {
-        print(self)
+    for _ in 0..<count {
+        print(stack.pop())
     }
 }
 
-public extension Bool {
-    func assertTrue() {
-        assert(self == true)
+func testBrowser() {
+    Solution.browser()
+}
+
+func testIsValid() {
+    Solution.isValid("{}}").assertFalse()
+    Solution.isValid("{}").assertTrue()
+    Solution.isValid("{}[]").assertTrue()
+    Solution.isValid("{}[]()").assertTrue()
+    Solution.isValid("{[()]}").assertTrue()
+    Solution.isValid("").assertTrue()
+}
+
+func testQueueBackedWithStack() {
+    let queue = QueueBackedWithStack<Int>()
+    let count = 5
+    for i in 0..<count {
+        queue.push(i)
+        
+        let popRet = queue.pop()
+        (popRet == i).assertTrue()
     }
     
-    func assertFalse() {
-        assert(self == false)
+    count.enumerate(queue.push)
+    
+    for i in 0..<count {
+        (queue.pop() == i).assertTrue()
     }
 }
 
-Solution.browser()
-
-
-Solution.isValid("{}}").assertFalse()
-Solution.isValid("{}").assertTrue()
-Solution.isValid("{}[]").assertTrue()
-Solution.isValid("{}[]()").assertTrue()
-Solution.isValid("{[()]}").assertTrue()
-Solution.isValid("").assertTrue()
+print("--- testQueueBackedWithStack")
+testQueueBackedWithStack()

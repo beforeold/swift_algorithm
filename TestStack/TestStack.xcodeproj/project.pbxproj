@@ -11,6 +11,8 @@
 		9457303028AD00BB00434D5B /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9457302F28AD00BB00434D5B /* Stack.swift */; };
 		9457304728ADDA6900434D5B /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9457304628ADDA6900434D5B /* Solution.swift */; };
 		9457304928ADDDDC00434D5B /* Browser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9457304828ADDDDC00434D5B /* Browser.swift */; };
+		9457304C28ADE9B300434D5B /* QueueBackedWithStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9457304B28ADE9B300434D5B /* QueueBackedWithStack.swift */; };
+		9457304E28ADEDB600434D5B /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9457304D28ADEDB600434D5B /* Util.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +33,8 @@
 		9457302F28AD00BB00434D5B /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		9457304628ADDA6900434D5B /* Solution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution.swift; sourceTree = "<group>"; };
 		9457304828ADDDDC00434D5B /* Browser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Browser.swift; sourceTree = "<group>"; };
+		9457304B28ADE9B300434D5B /* QueueBackedWithStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueBackedWithStack.swift; sourceTree = "<group>"; };
+		9457304D28ADEDB600434D5B /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 				9457302F28AD00BB00434D5B /* Stack.swift */,
 				9457304628ADDA6900434D5B /* Solution.swift */,
 				9457304828ADDDDC00434D5B /* Browser.swift */,
+				9457304B28ADE9B300434D5B /* QueueBackedWithStack.swift */,
+				9457304D28ADEDB600434D5B /* Util.swift */,
 			);
 			path = sources;
 			sourceTree = "<group>";
@@ -138,7 +144,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9457304928ADDDDC00434D5B /* Browser.swift in Sources */,
+				9457304E28ADEDB600434D5B /* Util.swift in Sources */,
 				9457303028AD00BB00434D5B /* Stack.swift in Sources */,
+				9457304C28ADE9B300434D5B /* QueueBackedWithStack.swift in Sources */,
 				9457302928AD00B400434D5B /* main.swift in Sources */,
 				9457304728ADDA6900434D5B /* Solution.swift in Sources */,
 			);
