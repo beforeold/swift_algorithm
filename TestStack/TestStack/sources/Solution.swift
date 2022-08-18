@@ -38,4 +38,27 @@ public class Solution {
         
         // browser.forward()
     }
+    
+    public static func isValid( _ string: String) -> Bool {
+        let stack = Stack<Character>()
+        let map: [Character: Character] = ["{": "}", "[": "]", "(": ")"]
+        
+        for char in string {
+            if map.keys.contains(char) {
+                stack.push(char)
+            } else {
+                if stack.isEmpty() {
+                    return false
+                } else {
+                    let left = stack.pop()
+                    let isRightMatch = map[left] == char
+                    if !isRightMatch {
+                        return false
+                    }
+                }
+            }
+        }
+        
+        return true
+    }
 }

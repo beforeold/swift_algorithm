@@ -64,11 +64,19 @@
 			isa = PBXGroup;
 			children = (
 				9457302828AD00B400434D5B /* main.swift */,
+				9457304A28ADE76A00434D5B /* sources */,
+			);
+			path = TestStack;
+			sourceTree = "<group>";
+		};
+		9457304A28ADE76A00434D5B /* sources */ = {
+			isa = PBXGroup;
+			children = (
 				9457302F28AD00BB00434D5B /* Stack.swift */,
 				9457304628ADDA6900434D5B /* Solution.swift */,
 				9457304828ADDDDC00434D5B /* Browser.swift */,
 			);
-			path = TestStack;
+			path = sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
