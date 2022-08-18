@@ -12,6 +12,7 @@
 		9457301928ACF7FB00434D5B /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9457301828ACF7FB00434D5B /* BinarySearchTree.swift */; };
 		9457301B28ACF81500434D5B /* Printer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9457301A28ACF81500434D5B /* Printer.swift */; };
 		9457305428AE0EB600434D5B /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9457305328AE0EB600434D5B /* Queue.swift */; };
+		9457305628AE110D00434D5B /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9457305528AE110D00434D5B /* Solution.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,7 @@
 		9457301828ACF7FB00434D5B /* BinarySearchTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
 		9457301A28ACF81500434D5B /* Printer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Printer.swift; sourceTree = "<group>"; };
 		9457305328AE0EB600434D5B /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		9457305528AE110D00434D5B /* Solution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				9457301828ACF7FB00434D5B /* BinarySearchTree.swift */,
+				9457305528AE110D00434D5B /* Solution.swift */,
 				9457301628ACF7BD00434D5B /* TreeNode.swift */,
 				9457301A28ACF81500434D5B /* Printer.swift */,
 				9457305328AE0EB600434D5B /* Queue.swift */,
@@ -144,6 +147,7 @@
 			files = (
 				9457305428AE0EB600434D5B /* Queue.swift in Sources */,
 				9457301B28ACF81500434D5B /* Printer.swift in Sources */,
+				9457305628AE110D00434D5B /* Solution.swift in Sources */,
 				9457301028ACF7B100434D5B /* main.swift in Sources */,
 				9457301728ACF7BD00434D5B /* TreeNode.swift in Sources */,
 				9457301928ACF7FB00434D5B /* BinarySearchTree.swift in Sources */,
