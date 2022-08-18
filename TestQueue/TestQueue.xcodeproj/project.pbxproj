@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9457303E28AD032500434D5B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9457303D28AD032500434D5B /* main.swift */; };
 		9457304528AD032C00434D5B /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9457304428AD032C00434D5B /* Queue.swift */; };
+		9457305028ADEF1F00434D5B /* StackBackedWithQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9457304F28ADEF1F00434D5B /* StackBackedWithQueue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,7 @@
 		9457303A28AD032500434D5B /* TestQueue */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestQueue; sourceTree = BUILT_PRODUCTS_DIR; };
 		9457303D28AD032500434D5B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		9457304428AD032C00434D5B /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		9457304F28ADEF1F00434D5B /* StackBackedWithQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackBackedWithQueue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +62,18 @@
 			isa = PBXGroup;
 			children = (
 				9457303D28AD032500434D5B /* main.swift */,
-				9457304428AD032C00434D5B /* Queue.swift */,
+				9457305128ADF4A800434D5B /* Sources */,
 			);
 			path = TestQueue;
+			sourceTree = "<group>";
+		};
+		9457305128ADF4A800434D5B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				9457304428AD032C00434D5B /* Queue.swift */,
+				9457304F28ADEF1F00434D5B /* StackBackedWithQueue.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9457303E28AD032500434D5B /* main.swift in Sources */,
+				9457305028ADEF1F00434D5B /* StackBackedWithQueue.swift in Sources */,
 				9457304528AD032C00434D5B /* Queue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
