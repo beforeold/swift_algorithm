@@ -6,11 +6,16 @@
 //
 
 import Foundation
+import DataStructure
 
 public class BinarySearchTree {
   public var root: TreeNode?
   
   private var size: Int = 0
+  
+  public func getSize() -> Int {
+    return size
+  }
   
   public func add(_ val: Int) {
     let newNode = TreeNode(val, nil, nil)

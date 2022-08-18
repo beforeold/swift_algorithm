@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import DataStructure
 
 public class Solution {
   /// 递归法
@@ -80,5 +81,13 @@ public class Solution {
     }
     
     return true
+  }
+  
+  public static func reverse(_ node: TreeNode?) {
+    guard let node = node else { return }
+    
+    reverse(node.left)
+    reverse(node.right)
+    (node.left, node.right) = (node.right, node.left)
   }
 }

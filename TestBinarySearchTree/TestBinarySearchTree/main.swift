@@ -62,17 +62,16 @@ func testTreeHeight() {
 
 testTreeHeight()
 
-func testIsComplete() {
-  
-  func buildTree(_ array: [Int]) -> BinarySearchTree {
-    let tree = BinarySearchTree()
-    for element in array {
-      tree.add(element)
-    }
-    
-    return tree
+func buildTree(_ array: [Int]) -> BinarySearchTree {
+  let tree = BinarySearchTree()
+  for element in array {
+    tree.add(element)
   }
   
+  return tree
+}
+
+func testIsComplete() {
   assert(Solution.isCompleteTree(buildTree([6, 4, 5, 7, 8]).root) == false)
   assert(Solution.isCompleteTree(buildTree([6, 4, 3, 7, 8]).root) == false)
   assert(Solution.isCompleteTree(buildTree([6]).root) == true)
@@ -81,3 +80,14 @@ func testIsComplete() {
 }
 
 testIsComplete()
+
+func testReverseTree() {
+  let tree = buildTree([6, 4, 5, 7, 8]).root
+  print(tree?.asString ?? "nil")
+  
+  Solution.reverse(tree)
+  print(tree?.asString ?? "nil")
+}
+
+print("\ntestReverseTree")
+testReverseTree()

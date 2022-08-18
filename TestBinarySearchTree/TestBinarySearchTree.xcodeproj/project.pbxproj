@@ -11,8 +11,8 @@
 		9457301728ACF7BD00434D5B /* TreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9457301628ACF7BD00434D5B /* TreeNode.swift */; };
 		9457301928ACF7FB00434D5B /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9457301828ACF7FB00434D5B /* BinarySearchTree.swift */; };
 		9457301B28ACF81500434D5B /* Printer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9457301A28ACF81500434D5B /* Printer.swift */; };
-		9457305428AE0EB600434D5B /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9457305328AE0EB600434D5B /* Queue.swift */; };
 		9457305628AE110D00434D5B /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9457305528AE110D00434D5B /* Solution.swift */; };
+		94C3675528AE4DE300B8B155 /* DataStructure in Frameworks */ = {isa = PBXBuildFile; productRef = 94C3675428AE4DE300B8B155 /* DataStructure */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,8 +33,9 @@
 		9457301628ACF7BD00434D5B /* TreeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeNode.swift; sourceTree = "<group>"; };
 		9457301828ACF7FB00434D5B /* BinarySearchTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
 		9457301A28ACF81500434D5B /* Printer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Printer.swift; sourceTree = "<group>"; };
-		9457305328AE0EB600434D5B /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		9457305528AE110D00434D5B /* Solution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution.swift; sourceTree = "<group>"; };
+		94C3675128AE4CAD00B8B155 /* DataStructure */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DataStructure; path = ../../DataStructure; sourceTree = "<group>"; };
+		94C3675228AE4CEF00B8B155 /* DataStructure */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DataStructure; path = ../../DataStructure; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94C3675528AE4DE300B8B155 /* DataStructure in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +53,10 @@
 		9457300328ACF7B100434D5B = {
 			isa = PBXGroup;
 			children = (
+				94C3675028AE4CAD00B8B155 /* Packages */,
 				9457300E28ACF7B100434D5B /* TestBinarySearchTree */,
 				9457300D28ACF7B100434D5B /* Products */,
+				94C3675328AE4DE300B8B155 /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -78,13 +82,28 @@
 		9457305228AE0BD900434D5B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				9457301828ACF7FB00434D5B /* BinarySearchTree.swift */,
 				9457305528AE110D00434D5B /* Solution.swift */,
+				9457301828ACF7FB00434D5B /* BinarySearchTree.swift */,
 				9457301628ACF7BD00434D5B /* TreeNode.swift */,
 				9457301A28ACF81500434D5B /* Printer.swift */,
-				9457305328AE0EB600434D5B /* Queue.swift */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		94C3675028AE4CAD00B8B155 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				94C3675128AE4CAD00B8B155 /* DataStructure */,
+				94C3675228AE4CEF00B8B155 /* DataStructure */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		94C3675328AE4DE300B8B155 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,6 +122,9 @@
 			dependencies = (
 			);
 			name = TestBinarySearchTree;
+			packageProductDependencies = (
+				94C3675428AE4DE300B8B155 /* DataStructure */,
+			);
 			productName = TestBinarySearchTree;
 			productReference = 9457300C28ACF7B100434D5B /* TestBinarySearchTree */;
 			productType = "com.apple.product-type.tool";
@@ -145,7 +167,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9457305428AE0EB600434D5B /* Queue.swift in Sources */,
 				9457301B28ACF81500434D5B /* Printer.swift in Sources */,
 				9457305628AE110D00434D5B /* Solution.swift in Sources */,
 				9457301028ACF7B100434D5B /* main.swift in Sources */,
@@ -314,6 +335,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		94C3675428AE4DE300B8B155 /* DataStructure */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DataStructure;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9457300428ACF7B100434D5B /* Project object */;
 }
