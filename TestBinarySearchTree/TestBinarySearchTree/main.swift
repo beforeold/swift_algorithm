@@ -8,7 +8,7 @@
 import Foundation
 
 func testTree() {
-  let tree = BinarySearchTree()
+  let tree = BinarySearchTree<Int>()
   tree.add(5)
   tree.add(4)
   tree.add(6)
@@ -18,14 +18,14 @@ func testTree() {
 }
 
 func treeTranversal() {
-  let tree = BinarySearchTree()
+  let tree = BinarySearchTree<Int>()
   tree.add(5)
   tree.add(4)
   tree.add(6)
   tree.add(7)
   tree.add(8)
   
-  func display( _ val: TreeNode) {
+  func display<E>( _ val: TreeNode<E>) {
     print(val)
   }
   
@@ -48,7 +48,7 @@ treeTranversal()
 
 
 func testTreeHeight() {
-  let tree = BinarySearchTree()
+  let tree = BinarySearchTree<Int>()
   tree.add(5)
   tree.add(4)
   tree.add(6)
@@ -62,8 +62,8 @@ func testTreeHeight() {
 
 testTreeHeight()
 
-func buildTree(_ array: [Int]) -> BinarySearchTree {
-  let tree = BinarySearchTree()
+func buildTree<E>(_ array: [E]) -> BinarySearchTree<E> {
+  let tree = BinarySearchTree<E>()
   for element in array {
     tree.add(element)
   }

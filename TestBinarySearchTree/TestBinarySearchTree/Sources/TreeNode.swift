@@ -8,11 +8,9 @@
 import Foundation
 
 
-public class TreeNode: CustomDebugStringConvertible {
-    public typealias Element = Int
-    
-    public var left: TreeNode?
-    public var right: TreeNode?
+public class TreeNode<Element: Comparable>: CustomDebugStringConvertible {
+    public var left: TreeNode<Element>?
+    public var right: TreeNode<Element>?
     
     /// 注意：这里必须使用弱指针，否则调用clear的时候，root置位nil，其他节点不会销毁
     public weak var parent: TreeNode?
@@ -38,19 +36,13 @@ public class TreeNode: CustomDebugStringConvertible {
         return (left != nil && right != nil)
     }
     
-    public init() {
-        self.element = 0;
-        self.left = nil;
-        self.right = nil;
-    }
-    
-    public init(_ val: Int) {
+    public init(_ val: Element) {
         self.element = val;
         self.left = nil;
         self.right = nil;
     }
     
-    public init(_ val: Int,
+    public init(_ val: Element,
                 _ left: TreeNode?,
                 _ right: TreeNode?)
     {

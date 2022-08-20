@@ -10,7 +10,7 @@ import DataStructure
 
 public class Solution {
   /// 递归法
-  public static func height(of node: TreeNode?) -> Int {
+  public static func height(of node: TreeNode<Int>?) -> Int {
     guard let node = node else {
       return 0
     }
@@ -19,14 +19,14 @@ public class Solution {
   }
   
   /// 迭代
-  public static func height2(of node: TreeNode?) -> Int {
+  public static func height2(of node: TreeNode<Int>?) -> Int {
     guard let node = node else {
       return 0
     }
     
     var levelSize = 1
     var height = 0
-    let queue = Queue<TreeNode>()
+    let queue = Queue<TreeNode<Int>>()
     queue.push(node)
     
     while !queue.isEmpty() {
@@ -46,12 +46,12 @@ public class Solution {
   }
   
   /// 判断一棵树是否为完全二叉树
-  public static func isCompleteTree(_ node: TreeNode?) -> Bool {
+  public static func isCompleteTree(_ node: TreeNode<Int>?) -> Bool {
     guard let node = node else {
       return false
     }
     
-    let queue = Queue<TreeNode>()
+    let queue = Queue<TreeNode<Int>>()
     queue.push(node)
     
     var onlyLeaf = false
@@ -83,7 +83,7 @@ public class Solution {
     return true
   }
   
-  public static func reverse(_ node: TreeNode?) {
+  public static func reverse(_ node: TreeNode<Int>?) {
     guard let node = node else { return }
     
     reverse(node.left)
