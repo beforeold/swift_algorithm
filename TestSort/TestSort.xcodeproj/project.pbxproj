@@ -94,12 +94,20 @@
 			isa = PBXGroup;
 			children = (
 				94C3677A28B3B99B00B8B155 /* main.swift */,
+				94C3678F28B3DDAD00B8B155 /* sorters */,
+			);
+			path = sources;
+			sourceTree = "<group>";
+		};
+		94C3678F28B3DDAD00B8B155 /* sorters */ = {
+			isa = PBXGroup;
+			children = (
 				94C3678128B3B9AA00B8B155 /* Sorter.swift */,
 				94C3678928B3C06E00B8B155 /* BubbleSort1.swift */,
 				94C3678B28B3D39B00B8B155 /* BubbleSort2.swift */,
 				94C3678D28B3D43900B8B155 /* BubbleSort3.swift */,
 			);
-			path = sources;
+			path = sorters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
