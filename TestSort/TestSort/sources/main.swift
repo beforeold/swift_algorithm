@@ -9,6 +9,9 @@ import Foundation
 import DataStructure
 
 
+let sa = StaticArray(initial: [3, 2, 1, nil, nil])
+print(sa)
+
 let initial = FullStaticArray(initial: [5, 3, 4, 1, 2])
 print(initial)
 

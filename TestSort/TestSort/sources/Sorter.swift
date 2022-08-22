@@ -36,11 +36,6 @@ open class Sorter<T: Comparable> {
 
 extension Sorter: CustomStringConvertible {
     public var description: String {
-        var string = ""
-        for i in 0..<array.length {
-            string += "\(array[i]) "
-        }
-        
-        return string
+        return array.description
     }
 }
