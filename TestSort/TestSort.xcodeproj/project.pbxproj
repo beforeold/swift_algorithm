@@ -11,6 +11,8 @@
 		94C3678228B3B9AA00B8B155 /* Sorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C3678128B3B9AA00B8B155 /* Sorter.swift */; };
 		94C3678728B3BC1000B8B155 /* DataStructure in Frameworks */ = {isa = PBXBuildFile; productRef = 94C3678628B3BC1000B8B155 /* DataStructure */; };
 		94C3678A28B3C06E00B8B155 /* BubbleSort1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C3678928B3C06E00B8B155 /* BubbleSort1.swift */; };
+		94C3678C28B3D39B00B8B155 /* BubbleSort2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C3678B28B3D39B00B8B155 /* BubbleSort2.swift */; };
+		94C3678E28B3D43900B8B155 /* BubbleSort3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C3678D28B3D43900B8B155 /* BubbleSort3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +33,8 @@
 		94C3678128B3B9AA00B8B155 /* Sorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorter.swift; sourceTree = "<group>"; };
 		94C3678428B3BBA400B8B155 /* dataStructure */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = dataStructure; path = ../../dataStructure; sourceTree = "<group>"; };
 		94C3678928B3C06E00B8B155 /* BubbleSort1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSort1.swift; sourceTree = "<group>"; };
+		94C3678B28B3D39B00B8B155 /* BubbleSort2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSort2.swift; sourceTree = "<group>"; };
+		94C3678D28B3D43900B8B155 /* BubbleSort3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSort3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,8 @@
 				94C3677A28B3B99B00B8B155 /* main.swift */,
 				94C3678128B3B9AA00B8B155 /* Sorter.swift */,
 				94C3678928B3C06E00B8B155 /* BubbleSort1.swift */,
+				94C3678B28B3D39B00B8B155 /* BubbleSort2.swift */,
+				94C3678D28B3D43900B8B155 /* BubbleSort3.swift */,
 			);
 			path = sources;
 			sourceTree = "<group>";
@@ -158,7 +164,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				94C3678228B3B9AA00B8B155 /* Sorter.swift in Sources */,
+				94C3678E28B3D43900B8B155 /* BubbleSort3.swift in Sources */,
 				94C3678A28B3C06E00B8B155 /* BubbleSort1.swift in Sources */,
+				94C3678C28B3D39B00B8B155 /* BubbleSort2.swift in Sources */,
 				94C3677B28B3B99B00B8B155 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

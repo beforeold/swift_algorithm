@@ -8,15 +8,16 @@
 import Foundation
 import DataStructure
 
-open class Sorter<T: Comparable> {
-    public let array: FullStaticArray<T>
+open class Sorter<E: Comparable> {
+    public let array: FullStaticArray<E>
     
-    public init(array: FullStaticArray<T>) {
+    public init(_ array: FullStaticArray<E>) {
         self.array = array
         
-        sort()
+        _sort()
     }
     
+    /// for subclass overriding
     open func sort() {
         
     }
@@ -31,6 +32,10 @@ open class Sorter<T: Comparable> {
     
     public func swap(_ i1: Int, _ i2: Int) {
         (array[i1], array[i2]) = (array[i2], array[i1])
+    }
+    
+    private func _sort() {
+        sort()
     }
 }
 
