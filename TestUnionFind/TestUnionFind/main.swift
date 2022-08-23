@@ -7,7 +7,7 @@
 
 import Foundation
 
-func testUnionFind(_ uf: UnionFindable) {
+func testUnionFind<UF>(_ uf: UF) where UF: UnionFindable, UF.V == Int {
   uf.union(0, 1)
   uf.union(1, 2)
   
@@ -34,5 +34,15 @@ func testUnionFind(_ uf: UnionFindable) {
   print("------")
 }
 
+/*
 testUnionFind(UnionFind_QF(length: 10))
 testUnionFind(UnionFind_QU(length: 10))
+*/
+
+testUnionFind({ () -> UnionFind<Int> in
+  let uf = UnionFind<Int>()
+  for i in 0..<10 {
+    uf.makeSet(i)
+  }
+  return uf
+}())

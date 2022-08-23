@@ -16,13 +16,15 @@ public class UnionFind_QF: UnionFindable {
     }
   }
   
-  public func find(_ val: Int) -> Int {
+  public func find(_ val: Int) -> Int? {
     return parents[val]
   }
   
   public func union(_ v1: Int, _ v2: Int) {
-    let p1 = find(v1)
-    let p2 = find(v2)
+    guard let p1 = find(v1), let p2 = find(v2) else {
+      return
+    }
+    
     if p1 == p2 { return }
     
     for i in 0..<parents.count {

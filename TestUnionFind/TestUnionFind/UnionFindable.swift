@@ -8,15 +8,17 @@
 import Foundation
 
 public protocol UnionFindable {
+  associatedtype V: Equatable
+  
   init(length: Int)
   
-  func find(_ val: Int) -> Int
+  func find(_ val: V) -> V?
   
-  func union(_ v1: Int, _ v2: Int)
+  func union(_ v1: V, _ v2: V)
 }
 
 public extension UnionFindable {
-  func isSame(_ v1: Int, _ v2: Int) -> Bool {
+  func isSame(_ v1: V, _ v2: V) -> Bool {
     return find(v1) == find(v2)
   }
 }

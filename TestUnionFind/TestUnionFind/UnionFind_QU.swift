@@ -16,7 +16,7 @@ public class UnionFind_QU: UnionFindable {
     }
   }
   
-  public func find(_ val: Int) -> Int {
+  public func find(_ val: Int) -> Int? {
     var val = val
     while (val != parents[val]) {
       val = parents[val]
@@ -25,8 +25,10 @@ public class UnionFind_QU: UnionFindable {
   }
   
   public func union(_ v1: Int, _ v2: Int) {
-    let p1 = find(v1)
-    let p2 = find(v2)
+    guard let p1 = find(v1), let p2 = find(v2) else {
+      return
+    }
+    
     if (p1 == p2) { return }
     parents[p1] = p2
   }

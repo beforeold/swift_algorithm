@@ -11,6 +11,7 @@
 		94C367A628B4CBCC00B8B155 /* UnionFind_QF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C367A528B4CBCC00B8B155 /* UnionFind_QF.swift */; };
 		94C367A828B4CE4600B8B155 /* UnionFind_QU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C367A728B4CE4600B8B155 /* UnionFind_QU.swift */; };
 		94C367AA28B4CEAF00B8B155 /* UnionFindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C367A928B4CEAF00B8B155 /* UnionFindable.swift */; };
+		94C367AC28B4DEC400B8B155 /* UnionFind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C367AB28B4DEC400B8B155 /* UnionFind.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,7 @@
 		94C367A528B4CBCC00B8B155 /* UnionFind_QF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionFind_QF.swift; sourceTree = "<group>"; };
 		94C367A728B4CE4600B8B155 /* UnionFind_QU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionFind_QU.swift; sourceTree = "<group>"; };
 		94C367A928B4CEAF00B8B155 /* UnionFindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionFindable.swift; sourceTree = "<group>"; };
+		94C367AB28B4DEC400B8B155 /* UnionFind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionFind.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 			children = (
 				94C3679E28B4CBBF00B8B155 /* main.swift */,
 				94C367A928B4CEAF00B8B155 /* UnionFindable.swift */,
+				94C367AB28B4DEC400B8B155 /* UnionFind.swift */,
 				94C367A528B4CBCC00B8B155 /* UnionFind_QF.swift */,
 				94C367A728B4CE4600B8B155 /* UnionFind_QU.swift */,
 			);
@@ -133,6 +136,7 @@
 			files = (
 				94C367A628B4CBCC00B8B155 /* UnionFind_QF.swift in Sources */,
 				94C367AA28B4CEAF00B8B155 /* UnionFindable.swift in Sources */,
+				94C367AC28B4DEC400B8B155 /* UnionFind.swift in Sources */,
 				94C3679F28B4CBBF00B8B155 /* main.swift in Sources */,
 				94C367A828B4CE4600B8B155 /* UnionFind_QU.swift in Sources */,
 			);
