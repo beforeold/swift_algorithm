@@ -37,8 +37,8 @@ public class ListGraph<Element: Hashable, Weight>: Graph {
     let edge = Edge(from: fromVertex, to: toVertex, weight: weight)
     if fromVertex.add(outEdge: edge) {
       edgesCount += 1
+      toVertex.add(inEdge: edge)
     }
-    toVertex.add(inEdge: edge)
   }
   
   public func removeVertex(_ value: Element) {
@@ -82,8 +82,8 @@ public class ListGraph<Element: Hashable, Weight>: Graph {
     let edge = Edge(from: fromVertex, to: toVertex)
     if fromVertex.remove(outEdge: edge) {
       edgesCount -= 1
+      toVertex.remove(inEdge: edge)
     }
-    toVertex.remove(inEdge: edge)
   }
 }
 
