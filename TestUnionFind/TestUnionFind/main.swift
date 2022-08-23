@@ -7,9 +7,7 @@
 
 import Foundation
 
-func testQF() {
-  let uf = UnionFind_QF(length: 10)
-  
+func testUnionFind(_ uf: UnionFindable) {
   uf.union(0, 1)
   uf.union(1, 2)
   
@@ -20,23 +18,21 @@ func testQF() {
   print(uf.isSame(0, 2))
   print(uf.isSame(6, 7))
   print(uf.isSame(8, 9))
-  
   print("------")
   
   print(uf.isSame(0, 6))
   print(uf.isSame(6, 8))
   print(uf.isSame(2, 8))
+  print("------")
   
   uf.union(0, 7)
   uf.union(6, 9)
   
-  print("------")
-  
   print(uf.isSame(0, 6))
   print(uf.isSame(6, 8))
   print(uf.isSame(2, 8))
-  
+  print("------")
 }
 
-
-testQF()
+testUnionFind(UnionFind_QF(length: 10))
+testUnionFind(UnionFind_QU(length: 10))
