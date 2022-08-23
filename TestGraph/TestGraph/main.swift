@@ -12,12 +12,20 @@ func testListGraph() {
   graph.addVertex(5)
   graph.addVertex(6)
   graph.addEdge(from: 5, to: 6, weight: nil)
-  print(graph.verticesSize())
-  print(graph.edgesSize())
+  graph.addEdge(from: 6, to: 5, weight: nil)
+  graph.addVertex(7)
+  graph.addEdge(from: 5, to: 7, weight: nil)
+  print(graph)
+  
+  graph.removeEdge(from: 5, to: 6)
+  print(graph)
   
   graph.removeVertex(5)
-  print(graph.verticesSize())
-  print(graph.edgesSize())
+  print(graph)
+  
+  graph.removeVertex(6)
+  graph.removeVertex(7)
+  print(graph)
 }
 
 
