@@ -28,7 +28,7 @@ public class ListGraph<Element: Hashable, Weight>: Graph {
   
   public func addEdge(from: Element,
                       to: Element,
-                      weight: Weight?) {
+                      weight: Weight? = nil) {
     guard let fromVertex = findVertex(of: from),
           let toVertex = findVertex(of: to) else {
       return

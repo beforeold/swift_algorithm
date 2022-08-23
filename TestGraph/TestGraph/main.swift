@@ -11,10 +11,10 @@ func testListGraph() {
   let graph = ListGraph<Int, Never>()
   graph.addVertex(5)
   graph.addVertex(6)
-  graph.addEdge(from: 5, to: 6, weight: nil)
-  graph.addEdge(from: 6, to: 5, weight: nil)
+  graph.addEdge(from: 5, to: 6)
+  graph.addEdge(from: 6, to: 5)
   graph.addVertex(7)
-  graph.addEdge(from: 5, to: 7, weight: nil)
+  graph.addEdge(from: 5, to: 7)
   print(graph)
   
   graph.removeEdge(from: 5, to: 6)
