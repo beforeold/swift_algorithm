@@ -13,6 +13,7 @@
 		94C3678A28B3C06E00B8B155 /* BubbleSort1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C3678928B3C06E00B8B155 /* BubbleSort1.swift */; };
 		94C3678C28B3D39B00B8B155 /* BubbleSort2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C3678B28B3D39B00B8B155 /* BubbleSort2.swift */; };
 		94C3678E28B3D43900B8B155 /* BubbleSort3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C3678D28B3D43900B8B155 /* BubbleSort3.swift */; };
+		94C3679128B4A5BF00B8B155 /* QuickSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C3679028B4A5BF00B8B155 /* QuickSort.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +36,7 @@
 		94C3678928B3C06E00B8B155 /* BubbleSort1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSort1.swift; sourceTree = "<group>"; };
 		94C3678B28B3D39B00B8B155 /* BubbleSort2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSort2.swift; sourceTree = "<group>"; };
 		94C3678D28B3D43900B8B155 /* BubbleSort3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSort3.swift; sourceTree = "<group>"; };
+		94C3679028B4A5BF00B8B155 /* QuickSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSort.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				94C3678928B3C06E00B8B155 /* BubbleSort1.swift */,
 				94C3678B28B3D39B00B8B155 /* BubbleSort2.swift */,
 				94C3678D28B3D43900B8B155 /* BubbleSort3.swift */,
+				94C3679028B4A5BF00B8B155 /* QuickSort.swift */,
 			);
 			path = sorters;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94C3678228B3B9AA00B8B155 /* Sorter.swift in Sources */,
+				94C3679128B4A5BF00B8B155 /* QuickSort.swift in Sources */,
 				94C3678E28B3D43900B8B155 /* BubbleSort3.swift in Sources */,
 				94C3678A28B3C06E00B8B155 /* BubbleSort1.swift in Sources */,
 				94C3678C28B3D39B00B8B155 /* BubbleSort2.swift in Sources */,

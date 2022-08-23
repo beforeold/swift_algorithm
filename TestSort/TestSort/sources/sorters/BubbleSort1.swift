@@ -14,7 +14,7 @@ public class BubbleSort1<E: Comparable>: Sorter<E> {
         for i in 0..<array.length {
             let end = array.length - i - 1
             for k in 0..<end {
-                if isGreater(k, k + 1) {
+                if cmp(k, k + 1) > 0 {
                     swap(k, k + 1)
                 }
             }

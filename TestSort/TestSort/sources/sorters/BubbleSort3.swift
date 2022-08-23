@@ -15,7 +15,7 @@ public class BubbleSort3<E: Comparable>: Sorter<E> {
         while (end > 0) {
             var selectedIndex: Int?
             for k in 0..<end {
-                if isGreater(k, k + 1) {
+                if cmp(k, k + 1) > 0 {
                     swap(k, k + 1)
                     selectedIndex = k
                 }

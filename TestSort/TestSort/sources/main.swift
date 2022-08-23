@@ -32,8 +32,18 @@ func testBubbleSort(array: [Int]) {
     let bubble3 = BubbleSort3(input.copy())
     print("bubble3 ", bubble3)
     
-    let bubble4 = BubbleSort3(.init([8, 10, 3, 5, 6]))
+    let bubble4 = BubbleSort3(input.copy())
     print("bubble4 ", bubble4)
 }
 
 testBubbleSort(array: [5, 4, 2, 1, 3, 8])
+
+func testQuickSort(array: [Int]) {
+    let input = FullStaticArray(array)
+    print("initial ", input)
+    
+    let quick1 = QuickSort(input.copy())
+    print("quick1 ", quick1)
+}
+
+testQuickSort(array: [5, 4, 2, 1, 3, 8])

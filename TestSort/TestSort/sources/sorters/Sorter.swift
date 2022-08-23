@@ -22,12 +22,18 @@ open class Sorter<E: Comparable> {
         
     }
     
-    public func isLess(_ i1: Int, _ i2: Int) -> Bool {
-        return array[i1] < array[i2]
+    public func cmp(_ i1: Int, _ i2: Int) -> Int {
+        return cmp(array[i1], array[i2])
     }
     
-    public func isGreater(_ i1: Int, _ i2: Int) -> Bool {
-        return array[i1] > array[i2]
+    public func cmp(_ e1: E, _ e2: E) -> Int {
+        if e1 > e2 {
+            return 1
+        } else if e1 < e2 {
+            return -1
+        } else {
+            return 0
+        }
     }
     
     public func swap(_ i1: Int, _ i2: Int) {
