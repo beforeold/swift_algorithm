@@ -17,6 +17,7 @@ public class DivideAndConquer {
     
     private static func quickSort<E>(_ array: inout [E], begin: Int, end: Int) where E: Comparable {
         if end - begin < 2 { return }
+        
         let mid = pivotIndex(&array, begin: begin, end: end)
         quickSort(&array, begin: begin, end: mid)
         quickSort(&array, begin: mid + 1, end: end)
@@ -49,7 +50,8 @@ public class DivideAndConquer {
                 }
             }
         }
+        array[begin] = pivot
         
-        return 0
+        return begin
     }
 }
