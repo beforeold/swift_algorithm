@@ -20,7 +20,7 @@ public class QuickSort<E: Comparable>: Sorter<E> {
         sort(begin, mid)
         sort(mid + 1, end)
     }
-    
+    letp
     private func pivotIndex(_ begin: Int, _ end: Int) -> Int {
         print("pivotIndex begin:\(begin) end: \(end)")
         var begin = begin
