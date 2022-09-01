@@ -202,3 +202,71 @@ class Solution88_02 {
     test3_kaijiemu()
   }
 }
+
+
+
+class Solution88_03 {
+  class Solution {
+    func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
+      var len1 = m - 1;
+              var len2 = n - 1;
+              var len = m + n - 1;
+      while (len1 >= 0 && len2 >= 0) {
+        // 注意--符号在后面，表示先进行计算再减1，这种缩写缩短了代码
+        if nums1[len1] > nums2[len2] {
+          nums1[len] = nums1[len1]
+          len1 -= 1
+        } else {
+          nums1[len] = nums2[len2]
+          len2 -= 1
+        }
+        len -= 1
+      }
+    }
+  }
+  
+  static func test() {
+    var nums1 = [3, 6, 8]
+    let m = nums1.count
+    let nums2 = [4, 5, 10, 11]
+    let n = nums2.count;
+    
+    // add zero
+    nums1.append(contentsOf: Array<Int>(repeating: 0, count: n))
+    
+    Solution().merge(&nums1, m, nums2, n)
+    assert(nums1 == [3, 4, 5, 6, 8, 10, 11])
+    
+    
+    func test2() {
+      var nums1 = [2]
+      let m = nums1.count
+      let nums2 = [1]
+      let n = nums2.count;
+      
+      // add zero
+      nums1.append(contentsOf: Array<Int>(repeating: 0, count: n))
+      
+      Solution().merge(&nums1, m, nums2, n)
+      assert(nums1 == [1, 2])
+    }
+    
+    func test3() {
+      var nums1 = [2]
+      let m = nums1.count
+      let nums2 = [1]
+      let n = nums2.count;
+      
+      // add zero
+      nums1.append(contentsOf: Array<Int>(repeating: 0, count: n))
+      
+      Solution().merge(&nums1, m, nums2, n)
+      assert(nums1 == [1, 2])
+    }
+    
+    test2()
+    test3()
+  }
+  
+  
+}
