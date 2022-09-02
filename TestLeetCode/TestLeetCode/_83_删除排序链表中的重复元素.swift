@@ -48,3 +48,39 @@ class Solution83 {
     }
   }
 }
+
+extension Solution83 {
+  class S2 {
+    static func test() {
+      do {
+        let list = ListNode.create(from: [1, 1, 2, 2, 3, 3])
+        let ret = Solution().deleteDuplicates(list)?.toArray()
+        assert(ret == [1, 2, 3])
+      }
+      
+      do {
+        let list = ListNode.create(from: [1, 1])
+        let ret = Solution().deleteDuplicates(list)?.toArray()
+        assert(ret == [1])
+      }
+      
+      do {
+        let list = ListNode.create(from: [1])
+        let ret = Solution().deleteDuplicates(list)?.toArray()
+        assert(ret == [1])
+      }
+    }
+    
+    class Solution {
+      func deleteDuplicates(_ head: ListNode?) -> ListNode? {
+        if head?.next == nil {
+          return head
+        }
+        
+        let next = deleteDuplicates(head?.next)
+        head?.next = next
+        return head?.val == next?.val ? next : head
+      }
+    }
+  }
+}
