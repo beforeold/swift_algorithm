@@ -274,3 +274,60 @@ extension Solution88 {
     }
   }
 }
+
+
+extension Solution88 {
+  // Wrong
+  class S5 {
+    class Solution {
+      func merge(_ nums1: inout [Int], _ nums2: [Int]) {
+        // setup for merge (add zero for nums2
+        let m = nums1.count
+        let n = nums2.count
+        nums1.append(contentsOf: [Int](repeating: 0, count: n))
+        
+        var end1 = m - 1
+        var end2 = n - 1
+        var position = m + n - 1
+        while end2 >= 0 {
+          if end1 >= 0 && nums1[end1] > nums2[end2] {
+            nums1[position] = nums1[end1]
+            end1 -= 1
+          } else {
+            nums1[position] = nums2[end2]
+            end2 -= 1
+          }
+          position -= 1
+        }
+      }
+    }
+    
+    static func test() {
+      var nums1 = [3, 6, 8]
+      let nums2 = [4, 5, 10, 11]
+      
+      Solution().merge(&nums1, nums2)
+      assert(nums1 == [3, 4, 5, 6, 8, 10, 11])
+      
+      
+      func test2() {
+        var nums1 = [2]
+        let nums2 = [1]
+        
+        Solution().merge(&nums1, nums2)
+        assert(nums1 == [1, 2])
+      }
+      
+      func test3() {
+        var nums1 = [2]
+        let nums2 = [1]
+        
+        Solution().merge(&nums1, nums2)
+        assert(nums1 == [1, 2])
+      }
+      
+      test2()
+      test3()
+    }
+  }
+}
