@@ -29,5 +29,6 @@ SolutionOffer22.S1.test()
 
 Solution234.S1.test()
 Solution234.S2.test()
+Solution234.S3.test()
 
 print("Hello, World!")

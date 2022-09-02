@@ -1,5 +1,5 @@
 //
-//  _剑指Offer_22_链表中倒数第k个节点.swift
+//  _剑指Offer_22_链表中倒数第k个结点.swift
 //  TestLeetCode
 //
 //  Created by beforeold on 2022/9/2.
