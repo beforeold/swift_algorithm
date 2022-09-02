@@ -40,9 +40,17 @@ class Solution144 {
      * }
      */
     class Solution {
-        func preorderTraversal(_ root: TreeNode?) -> [Int] {
+      func preorderTraversal(_ root: TreeNode?) -> [Int] {
+        guard let root = root else {
           return []
         }
+        
+        var array = [root.val]
+        array.append(contentsOf: preorderTraversal(root.left))
+        array.append(contentsOf: preorderTraversal(root.right))
+        
+        return array
+      }
     }
   }
 }
