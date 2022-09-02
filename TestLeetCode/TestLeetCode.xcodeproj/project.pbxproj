@@ -10,6 +10,7 @@
 		94E1DC7528C1F58D009529BE /* _160_相交链表.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E1DC7428C1F58D009529BE /* _160_相交链表.swift */; };
 		94E1DC7728C201B1009529BE /* _剑指Offer_22_链表中倒数第k个节点.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E1DC7628C201B1009529BE /* _剑指Offer_22_链表中倒数第k个节点.swift */; };
 		94E1DC7928C209D9009529BE /* _234_回文链表.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E1DC7828C209D9009529BE /* _234_回文链表.swift */; };
+		94E1DC7B28C248EF009529BE /* _83_删除排序链表中的重复元素.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E1DC7A28C248EF009529BE /* _83_删除排序链表中的重复元素.swift */; };
 		94FC038328C0CEC80080D5A3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FC038228C0CEC80080D5A3 /* main.swift */; };
 		94FC038A28C0CED90080D5A3 /* _88_合并两个有序数组.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FC038928C0CED90080D5A3 /* _88_合并两个有序数组.swift */; };
 		94FC038E28C1AB600080D5A3 /* _206_反转链表.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FC038D28C1AB600080D5A3 /* _206_反转链表.swift */; };
@@ -34,6 +35,7 @@
 		94E1DC7428C1F58D009529BE /* _160_相交链表.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_160_相交链表.swift"; sourceTree = "<group>"; };
 		94E1DC7628C201B1009529BE /* _剑指Offer_22_链表中倒数第k个节点.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_剑指Offer_22_链表中倒数第k个节点.swift"; sourceTree = "<group>"; };
 		94E1DC7828C209D9009529BE /* _234_回文链表.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_234_回文链表.swift"; sourceTree = "<group>"; };
+		94E1DC7A28C248EF009529BE /* _83_删除排序链表中的重复元素.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_83_删除排序链表中的重复元素.swift"; sourceTree = "<group>"; };
 		94FC037F28C0CEC80080D5A3 /* TestLeetCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestLeetCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		94FC038228C0CEC80080D5A3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		94FC038928C0CED90080D5A3 /* _88_合并两个有序数组.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_88_合并两个有序数组.swift"; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				94E1DC7428C1F58D009529BE /* _160_相交链表.swift */,
 				94E1DC7628C201B1009529BE /* _剑指Offer_22_链表中倒数第k个节点.swift */,
 				94E1DC7828C209D9009529BE /* _234_回文链表.swift */,
+				94E1DC7A28C248EF009529BE /* _83_删除排序链表中的重复元素.swift */,
 				94FC038F28C1DC350080D5A3 /* _null_反转数组.swift */,
 			);
 			path = TestLeetCode;
@@ -155,6 +158,7 @@
 				94FC038E28C1AB600080D5A3 /* _206_反转链表.swift in Sources */,
 				94FC039428C1E82D0080D5A3 /* _21_合并两个有序链表.swift in Sources */,
 				94FC038A28C0CED90080D5A3 /* _88_合并两个有序数组.swift in Sources */,
+				94E1DC7B28C248EF009529BE /* _83_删除排序链表中的重复元素.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
