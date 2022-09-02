@@ -77,7 +77,7 @@ extension Solution160 {
           }
         }
       }
-
+      
       func getIntersectionNode(_ headA: ListNode?, _ headB: ListNode?) -> ListNode? {
         var set: Set<NodeWrapper> = []
         var node = headA
@@ -98,3 +98,24 @@ extension Solution160 {
   }
 }
 
+
+extension Solution160 {
+  class S3 {
+    /// 利用 hashset 进行去重
+    class Solution {
+      func getIntersectionNode(_ headA: ListNode?, _ headB: ListNode?) -> ListNode? {
+        if headA == nil || headB == nil {
+          return nil
+        }
+        
+        var pA = headA
+        var pB = headB
+        while pA !== pB {
+          pA = pA == nil ? headB : pA?.next
+          pB = pB == nil ? headA : pB?.next
+        }
+        return pA
+      }
+    }
+  }
+}
