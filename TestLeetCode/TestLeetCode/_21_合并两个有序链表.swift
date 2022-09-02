@@ -49,3 +49,39 @@ class Solution21 {
     assert(ListNode.printableListString(of: merged) == "[1, 2, 2, 3, 4, 5, 6]")
   }
 }
+
+extension Solution21 {
+  class S2 {
+    class Solution {
+      func mergeTwoLists(_ list1: ListNode?, _ list2: ListNode?) -> ListNode? {
+        let dummyHead = ListNode(0)
+        var curNode: ListNode? = dummyHead
+        
+        var list1 = list1
+        var list2 = list2
+        
+        while list1 != nil && list2 != nil {
+          if list1!.val < list2!.val {
+            curNode?.next = list1
+            list1 = list1?.next
+          } else {
+            curNode?.next = list2
+            list2 = list2?.next
+          }
+          curNode = curNode?.next
+        }
+        
+        curNode?.next = list1 ?? list2
+        
+        return dummyHead.next
+      }
+    }
+    
+    static func test() {
+      let list1 = ListNode.create(from: [1, 2, 5])
+      let list2 = ListNode.create(from: [2, 3, 4, 6])
+      let merged = Solution().mergeTwoLists(list1, list2)
+      assert(ListNode.printableListString(of: merged) == "[1, 2, 2, 3, 4, 5, 6]")
+    }
+  }
+}
