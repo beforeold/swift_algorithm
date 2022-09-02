@@ -21,5 +21,7 @@ Solution206.S2.test()
 
 Solution_null_01.test()
 
+Solution21.test()
+
 
 print("Hello, World!")

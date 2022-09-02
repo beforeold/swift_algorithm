@@ -52,6 +52,12 @@ public class ListNode {
   }
 }
 
+extension Optional where Wrapped: ListNode {
+  func toString() -> String {
+    return ListNode.printableListString(of: self)
+  }
+}
+
 class Solution206 {
   
   
