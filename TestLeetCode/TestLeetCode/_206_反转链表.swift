@@ -28,27 +28,23 @@ public class ListNode {
     return dummyHead.next
   }
   
-  static func printableListString(of node: ListNode?) -> String {
-    var node = node
-    if node == nil {
-      return "null"
-    }
-    var string = "["
-    while node != nil {
-      let next = node?.next
-      
-      let nodeValue = node!.val
-      if next == nil {
-        string += "\(nodeValue)"
-      } else {
-        string += "\(nodeValue), "
-      }
-      
-      node = next
-    }
-    string += "]"
+  func toArray() -> [Int] {
+    var array = [Int]()
     
-    return string
+    var node: ListNode? = self
+    while node != nil {
+      array.append(node!.val)
+      node = node?.next
+    }
+    
+    return array
+  }
+  
+  static func printableListString(of node: ListNode?) -> String {
+    guard let node = node else {
+      return "null";
+    }
+    return node.toArray().description
   }
 }
 
