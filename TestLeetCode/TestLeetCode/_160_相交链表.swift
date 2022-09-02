@@ -11,6 +11,7 @@ import Foundation
 
 class Solution160 {
   class S1 {
+    // 先对齐两个链表，再逐个对比
     class Solution {
       func getIntersectionNode(_ headA: ListNode?, _ headB: ListNode?) -> ListNode? {
         // calculate count
@@ -59,3 +60,41 @@ class Solution160 {
     }
   }
 }
+
+extension Solution160 {
+  class S2 {
+    /// 利用 hashset 进行去重
+    class Solution {
+      struct NodeWrapper: Hashable {
+        var node: ListNode
+        static func == (lhs: NodeWrapper, rhs: NodeWrapper) -> Bool {
+          return lhs.node === rhs.node
+        }
+        
+        func hash(into hasher: inout Hasher) {
+          withUnsafePointer(to: node) { pointer in
+            hasher.combine(pointer)
+          }
+        }
+      }
+
+      func getIntersectionNode(_ headA: ListNode?, _ headB: ListNode?) -> ListNode? {
+        var set: Set<NodeWrapper> = []
+        var node = headA
+        while node != nil {
+          set.insert(NodeWrapper(node: node!))
+        }
+        
+        node = headB
+        while node != nil {
+          if set.contains(NodeWrapper(node: node!)) {
+            return node
+          }
+        }
+        
+        return nil
+      }
+    }
+  }
+}
+
