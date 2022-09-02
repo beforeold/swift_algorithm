@@ -17,3 +17,4 @@ Solution88_03.test()
 
 
 Solution206.test()
+Solution206_02.test()
