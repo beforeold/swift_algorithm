@@ -7,15 +7,15 @@
 
 import Foundation
 
-/*
-Solution88_01.test()
-Solution88_02.test()
-Solution88_03.test()
-*/
+Solution88.test()
+Solution88.S2.test()
+Solution88.S3.test()
+// wrong
+// Solution88.S4.test()
 
-
+//
 Solution206.test()
-Solution206_02.test()
+Solution206.S2.test()
 
 
 Solution_null_01.test()

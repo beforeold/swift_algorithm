@@ -113,26 +113,28 @@ class Solution206 {
   }
 }
 
-class Solution206_02 {
-  /// 递归
-  class Solution {
-    func reverseList(_ head: ListNode?) -> ListNode? {
-      guard let _ = head?.next else {
-        return head
+extension Solution206 {
+  class S2 {
+    /// 递归
+    class Solution {
+      func reverseList(_ head: ListNode?) -> ListNode? {
+        guard let _ = head?.next else {
+          return head
+        }
+        
+        let ret = reverseList(head?.next)
+        let tail = head?.next
+        tail?.next = head
+        head?.next = nil
+        
+        return ret
       }
-      
-      let ret = reverseList(head?.next)
-      let tail = head?.next
-      tail?.next = head
-      head?.next = nil
-      
-      return ret
     }
-  }
-  
-  static func test() {
-    let list = ListNode.create(from: [5, 4, 3, 2, 1])
-    let new = Solution().reverseList(list)
-    assert(ListNode.printableListString(of: new) == "[1, 2, 3, 4, 5]")
+    
+    static func test() {
+      let list = ListNode.create(from: [5, 4, 3, 2, 1])
+      let new = Solution().reverseList(list)
+      assert(ListNode.printableListString(of: new) == "[1, 2, 3, 4, 5]")
+    }
   }
 }
