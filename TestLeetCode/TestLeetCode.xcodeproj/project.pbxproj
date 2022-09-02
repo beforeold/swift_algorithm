@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		94FC038328C0CEC80080D5A3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FC038228C0CEC80080D5A3 /* main.swift */; };
 		94FC038A28C0CED90080D5A3 /* _88_合并两个有序数组.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FC038928C0CED90080D5A3 /* _88_合并两个有序数组.swift */; };
+		94FC038E28C1AB600080D5A3 /* _206_反转链表.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FC038D28C1AB600080D5A3 /* _206_反转链表.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,7 @@
 		94FC037F28C0CEC80080D5A3 /* TestLeetCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestLeetCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		94FC038228C0CEC80080D5A3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		94FC038928C0CED90080D5A3 /* _88_合并两个有序数组.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_88_合并两个有序数组.swift"; sourceTree = "<group>"; };
+		94FC038D28C1AB600080D5A3 /* _206_反转链表.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_206_反转链表.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			children = (
 				94FC038228C0CEC80080D5A3 /* main.swift */,
 				94FC038928C0CED90080D5A3 /* _88_合并两个有序数组.swift */,
+				94FC038D28C1AB600080D5A3 /* _206_反转链表.swift */,
 			);
 			path = TestLeetCode;
 			sourceTree = "<group>";
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94FC038328C0CEC80080D5A3 /* main.swift in Sources */,
+				94FC038E28C1AB600080D5A3 /* _206_反转链表.swift in Sources */,
 				94FC038A28C0CED90080D5A3 /* _88_合并两个有序数组.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

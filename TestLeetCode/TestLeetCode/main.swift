@@ -9,6 +9,11 @@ import Foundation
 
 print("Hello, World!")
 
+/*
 Solution88_01.test()
 Solution88_02.test()
 Solution88_03.test()
+*/
+
+
+Solution206.test()
