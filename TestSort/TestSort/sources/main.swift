@@ -47,3 +47,7 @@ func testQuickSort(array: [Int]) {
 }
 
 testQuickSort(array: [5, 4, 2, 1, 3, 8])
+
+var list = [5, 3, 2, 1, 6, 8, 4, 9, 7]
+QuickSorter.sort(&list)
+assert(list == [1, 2, 3, 4, 5, 6, 7, 8, 9])
