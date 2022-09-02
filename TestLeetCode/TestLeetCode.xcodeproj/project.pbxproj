@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94E1DC7528C1F58D009529BE /* _160_相交链表.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E1DC7428C1F58D009529BE /* _160_相交链表.swift */; };
 		94FC038328C0CEC80080D5A3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FC038228C0CEC80080D5A3 /* main.swift */; };
 		94FC038A28C0CED90080D5A3 /* _88_合并两个有序数组.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FC038928C0CED90080D5A3 /* _88_合并两个有序数组.swift */; };
 		94FC038E28C1AB600080D5A3 /* _206_反转链表.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FC038D28C1AB600080D5A3 /* _206_反转链表.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		94E1DC7428C1F58D009529BE /* _160_相交链表.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_160_相交链表.swift"; sourceTree = "<group>"; };
 		94FC037F28C0CEC80080D5A3 /* TestLeetCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestLeetCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		94FC038228C0CEC80080D5A3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		94FC038928C0CED90080D5A3 /* _88_合并两个有序数组.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_88_合并两个有序数组.swift"; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				94FC038D28C1AB600080D5A3 /* _206_反转链表.swift */,
 				94FC039128C1E0370080D5A3 /* _141_环形链表.swift */,
 				94FC039328C1E82D0080D5A3 /* _21_合并两个有序链表.swift */,
+				94E1DC7428C1F58D009529BE /* _160_相交链表.swift */,
 				94FC038F28C1DC350080D5A3 /* _null_反转数组.swift */,
 			);
 			path = TestLeetCode;
@@ -140,6 +143,7 @@
 				94FC039028C1DC350080D5A3 /* _null_反转数组.swift in Sources */,
 				94FC039228C1E0370080D5A3 /* _141_环形链表.swift in Sources */,
 				94FC038328C0CEC80080D5A3 /* main.swift in Sources */,
+				94E1DC7528C1F58D009529BE /* _160_相交链表.swift in Sources */,
 				94FC038E28C1AB600080D5A3 /* _206_反转链表.swift in Sources */,
 				94FC039428C1E82D0080D5A3 /* _21_合并两个有序链表.swift in Sources */,
 				94FC038A28C0CED90080D5A3 /* _88_合并两个有序数组.swift in Sources */,
