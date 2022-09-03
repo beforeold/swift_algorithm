@@ -153,12 +153,12 @@ extension Solution144 {
           }
         }
       }
-      
-      static func test() {
-        let root = TreeNode.create(from: [1, 2, 3, 4, 5, 6, 7])
-        let ret = Solution().preorderTraversal(root)
-        assert(ret == [1, 2, 4, 5, 3, 6, 7])
-      }
+    }
+    
+    static func test() {
+      let root = TreeNode.create(from: [1, 2, 3, 4, 5, 6, 7])
+      let ret = Solution().preorderTraversal(root)
+      assert(ret == [1, 2, 4, 5, 3, 6, 7])
     }
   }
 }

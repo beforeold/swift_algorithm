@@ -42,4 +42,8 @@ Solution144.S4.test()
 Solution102.S1.test()
 Solution102.S2.test()
 
+Solution94.S1.test()
+Solution94.S2.test()
+Solution94.S4.test()
+
 print("Hello, World!")
