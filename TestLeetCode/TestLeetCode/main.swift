@@ -34,6 +34,9 @@ Solution234.S3.test()
 Solution83.S1.test()
 Solution83.S2.test()
 
+Solution144.S1.test()
+Solution144.S2.test()
+
 Solution102.S1.test()
 Solution102.S2.test()
 
