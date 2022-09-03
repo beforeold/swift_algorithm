@@ -40,3 +40,36 @@ class SolutionOffer54 {
     }
   }
 }
+
+extension SolutionOffer54 {
+  class S2 {
+    class Solution {
+      func kthLargest(_ root: TreeNode?, _ k: Int) -> Int {
+        if root == nil {
+          return -1
+        }
+        
+        var node = root
+        var stack = [TreeNode]()
+        var k = k
+        
+        while node != nil || !stack.isEmpty {
+          while node != nil {
+            stack.append(node!)
+            node = node?.right
+          }
+          
+          node = stack.removeLast()
+          k -= 1
+          if k == 0 {
+            return node!.val
+          }
+          
+          node = node?.left
+        }
+        
+        return -1
+      }
+    }
+  }
+}
