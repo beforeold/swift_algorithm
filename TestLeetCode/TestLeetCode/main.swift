@@ -47,5 +47,6 @@ Solution94.S2.test()
 Solution94.S4.test()
 
 Solution104.S1.test()
+Solution104.S2.test()
 
 print("Hello, World!")
