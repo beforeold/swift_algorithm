@@ -16,6 +16,7 @@
 		943420CA28C457D800FB4183 /* _101_对称二叉树.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943420C928C457D800FB4183 /* _101_对称二叉树.swift */; };
 		943420CC28C4617A00FB4183 /* _226_翻转二叉树.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943420CB28C4617A00FB4183 /* _226_翻转二叉树.swift */; };
 		943420CE28C467A400FB4183 /* _112_路径总和.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943420CD28C467A400FB4183 /* _112_路径总和.swift */; };
+		943420D028C46D4D00FB4183 /* _20_有效的括号.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943420CF28C46D4D00FB4183 /* _20_有效的括号.swift */; };
 		94A5774028C3945F00BA65DF /* _剑指Offer_54_二叉搜索树的第k大结点.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A5773F28C3945F00BA65DF /* _剑指Offer_54_二叉搜索树的第k大结点.swift */; };
 		94A5774228C39EF100BA65DF /* _543_二叉树的直径.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A5774128C39EF100BA65DF /* _543_二叉树的直径.swift */; };
 		94E1DC7528C1F58D009529BE /* _160_相交链表.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E1DC7428C1F58D009529BE /* _160_相交链表.swift */; };
@@ -53,6 +54,7 @@
 		943420C928C457D800FB4183 /* _101_对称二叉树.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_101_对称二叉树.swift"; sourceTree = "<group>"; };
 		943420CB28C4617A00FB4183 /* _226_翻转二叉树.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_226_翻转二叉树.swift"; sourceTree = "<group>"; };
 		943420CD28C467A400FB4183 /* _112_路径总和.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_112_路径总和.swift"; sourceTree = "<group>"; };
+		943420CF28C46D4D00FB4183 /* _20_有效的括号.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_20_有效的括号.swift"; sourceTree = "<group>"; };
 		94A5773F28C3945F00BA65DF /* _剑指Offer_54_二叉搜索树的第k大结点.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_剑指Offer_54_二叉搜索树的第k大结点.swift"; sourceTree = "<group>"; };
 		94A5774128C39EF100BA65DF /* _543_二叉树的直径.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_543_二叉树的直径.swift"; sourceTree = "<group>"; };
 		94E1DC7428C1F58D009529BE /* _160_相交链表.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_160_相交链表.swift"; sourceTree = "<group>"; };
@@ -80,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		943420D228C4780000FB4183 /* stack_queue */ = {
+			isa = PBXGroup;
+			children = (
+				943420CF28C46D4D00FB4183 /* _20_有效的括号.swift */,
+			);
+			path = stack_queue;
+			sourceTree = "<group>";
+		};
 		94E1DC7C28C24DF7009529BE /* array */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +157,7 @@
 				94E1DC7C28C24DF7009529BE /* array */,
 				94E1DC7D28C24E02009529BE /* linked_list */,
 				94E1DC8028C24E55009529BE /* binary_tree */,
+				943420D228C4780000FB4183 /* stack_queue */,
 			);
 			path = TestLeetCode;
 			sourceTree = "<group>";
@@ -214,6 +225,7 @@
 				943420CE28C467A400FB4183 /* _112_路径总和.swift in Sources */,
 				943420CA28C457D800FB4183 /* _101_对称二叉树.swift in Sources */,
 				94FC039028C1DC350080D5A3 /* _null_反转数组.swift in Sources */,
+				943420D028C46D4D00FB4183 /* _20_有效的括号.swift in Sources */,
 				94E1DC7F28C24E4E009529BE /* _144_二叉树的前序遍历.swift in Sources */,
 				94FC039228C1E0370080D5A3 /* _141_环形链表.swift in Sources */,
 				940B605E28C36C42005F6622 /* TreeNode.swift in Sources */,
