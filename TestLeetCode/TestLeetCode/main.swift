@@ -61,4 +61,6 @@ Solution169.S3.test()
 Solution415.S1.test()
 Solution415.S2.test()
 
+Solution704.S2.test()
+
 print("Hello, World!")
