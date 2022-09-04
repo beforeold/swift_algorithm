@@ -22,17 +22,17 @@ extension Solution543 {
       
       func diameterOfBinaryTree(_ root: TreeNode?) -> Int {
         diameter = 0
-        _ = height(of: root)
+        _ = edgeHeight(of: root)
         return diameter
       }
       
-      private func height(of root: TreeNode?) -> Int {
+      private func edgeHeight(of root: TreeNode?) -> Int {
         guard let root = root else {
           return 0
         }
         
-        let leftHeight = height(of: root.left)
-        let rightHeight = height(of: root.right)
+        let leftHeight = edgeHeight(of: root.left)
+        let rightHeight = edgeHeight(of: root.right)
         let curDiameter = leftHeight + rightHeight
         diameter = max(diameter, curDiameter)
         return max(leftHeight, rightHeight) + 1
