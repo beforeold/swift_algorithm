@@ -30,9 +30,9 @@ extension TreeNode {
     
   outerLoop: while true {
     curLevelNodeList = []
-    for _ in 0..<levelSize {
+  innerLoop: for _ in 0..<levelSize {
       guard index < array.count else {
-        break outerLoop
+        break innerLoop
       }
       
       let node = TreeNode(array[index])
