@@ -69,3 +69,54 @@ extension Solution415.S1 {
     }
   }
 }
+
+extension Solution415 {
+  class S2 {
+    class Solution {
+      func addStrings(_ num1: String, _ num2: String) -> String {
+        var index1 = num1.count - 1
+        var index2 = num2.count - 1
+        var add = 0
+        
+        let list1 = num1.map { $0.wholeNumberValue! }
+        let list2 = num2.map { $0.wholeNumberValue! }
+        
+        var result = [Int]()
+        
+        while index1 >= 0 || index2 >= 0 || add >= 0 {
+          let v1 = int(index: index1, list1)
+          let v2 = int(index: index2, list2)
+          let sum = v1 + v2 + add
+          add = sum / 10
+          result.append(sum % 10)
+          
+          index1 -= 1
+          index2 -= 1
+        }
+        
+        result.reverse()
+        return result.reduce("") { partialResult, element in
+          return partialResult + element.description
+        }
+      }
+      
+      func int(index: Int, _ list: [Int]) -> Int {
+        return index >= 0 ? list[index] : 0
+      }
+    }
+  }
+}
+
+extension Solution415.S2 {
+  static func test() {
+    do {
+      let ret = Solution().addStrings("123", "45678910")
+      assert(ret == (123 + 45678910).description)
+    }
+    
+    do {
+      let ret = Solution().addStrings("456", "77")
+      assert(ret == (456 + 77).description)
+    }
+  }
+}
