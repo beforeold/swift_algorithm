@@ -21,6 +21,11 @@ public class TreeNode {
 }
 
 extension TreeNode {
+  /// 传入一个可空值的数组，从而忽略这一子树
+  static func _create(from array: [Int?]) -> TreeNode? {
+    return nil
+  }
+  
   static func create(from array: [Int]) -> TreeNode? {
     var levelSize = 1
     var index = 0

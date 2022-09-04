@@ -33,7 +33,7 @@ class Solution102 {
         var levelValues = [Int]()
         
         while !queue.isEmpty {
-          // pop
+          // dequeue
           let node = queue.removeFirst()
           leftCount -= 1
           
@@ -81,7 +81,7 @@ extension Solution102 {
         queue.append(root)
         
         while !queue.isEmpty {
-          // pop
+          // dequeue
           let node = queue.removeFirst()
           result.append(node.val)
           node.left.map { queue.append($0) }
