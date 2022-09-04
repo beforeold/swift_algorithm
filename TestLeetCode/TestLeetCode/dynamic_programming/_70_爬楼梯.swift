@@ -47,8 +47,45 @@ extension Solution70 {
   }
 }
 
+extension Solution70 {
+  class S3 {
+    class Solution {
+      func climbStairs(_ n: Int) -> Int {
+        var p = 0
+        var q = 0
+        var r = 1
+        for _ in 1...n {
+          p = q
+          q = r
+          r = p + q
+          print("rvalue: ", r)
+        }
+        return r
+      }
+    }
+  }
+}
+
+
 extension Solution70.S1 {
   static func test() {
+    // 111
+    // 12
+    // 21
+    assert(Solution().climbStairs(3) == 3)
+    
+    // 1111
+    // 22
+    // 121
+    // 112
+    // 211
+    assert(Solution().climbStairs(4) == 5)
+  }
+}
+
+extension Solution70.S3 {
+  static func test() {
+    
     // 111
     // 12
     // 21
