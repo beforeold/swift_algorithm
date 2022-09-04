@@ -41,7 +41,7 @@ extension Solution169 {
 }
 
 extension Solution169 {
-  class S2 {
+  class S1_1 {
     class Solution {
       func majorityElement(_ nums: [Int]) -> Int {
         var map = [Int: Int]()
@@ -62,10 +62,93 @@ extension Solution169 {
   }
 }
 
+
+extension Solution169 {
+  /// 先排序，后取值
+  class S2 {
+    class Solution {
+      func majorityElement(_ nums: [Int]) -> Int {
+        let nums = nums.sorted()
+        return nums[nums.count / 2]
+      }
+    }
+  }
+}
+
+extension Solution169 {
+  /// 随机处理
+  class S3 {
+    class Solution {
+      func majorityElement(_ nums: [Int]) -> Int {
+        let majCount = nums.count / 2
+        
+        func count(of candidate: Int) -> Int {
+          return nums.reduce(0) { partialResult, num in
+            if num == candidate {
+              return partialResult + 1
+            } else {
+              return partialResult
+            }
+          }
+        }
+        
+        var randomeGenerator = SystemRandomNumberGenerator()
+        
+        while true {
+          let random = nums.randomElement(using: &randomeGenerator)!
+          if count(of: random) > majCount {
+            return random
+          }
+        }
+      }
+    }
+  }
+}
+
+
+extension Solution169 {
+  class S4 {
+    class Solution {
+      func majorityElement(_ nums: [Int]) -> Int {
+        return major(nums: nums, low: 0, high: nums.count - 1)
+      }
+      
+      private func major(nums: [Int], low: Int, high: Int) -> Int {
+        if low == high {
+          return nums[low]
+        }
+        
+        let mid = (high - low) / 2 + low
+        let left = major(nums: nums, low: low, high: mid)
+        let right = major(nums: nums, low: mid + 1, high: high)
+        
+        if left == right {
+          return left
+        }
+        
+        let leftCount = count(of: left, nums: nums, low: low, high: mid)
+        let rightCount = count(of: right, nums: nums, low: mid + 1, high: high)
+        return leftCount > rightCount ? left : right
+      }
+      
+      private func count(of num: Int, nums: [Int], low: Int, high: Int) -> Int {
+        var count = 0
+        for index in low...high {
+          if num == nums[index] {
+            count += 1
+          }
+        }
+        return count
+      }
+    }
+  }
+}
+
+
 extension Solution169 {
   /// boyer moore 算法
   /// https://leetcode.cn/problems/majority-element/solution/duo-shu-yuan-su-by-leetcode-solution/
-  class S3 {
+  class S5 {
     class Solution {
       func majorityElement(_ nums: [Int]) -> Int {
         var candidate: Int?
@@ -94,37 +177,5 @@ extension Solution169.S3 {
     let ret = Solution().majorityElement([5, 1, 0, 5, 2, 5, 4, 4, 5, 5, 5])
     print("maj ret: \(ret)")
     assert(ret == 5)
-  }
-}
-
-
-extension Solution169 {
-  /// boyer moore 算法
-  /// https://leetcode.cn/problems/majority-element/solution/duo-shu-yuan-su-by-leetcode-solution/
-  class S4 {
-    class Solution {
-      func majorityElement(_ nums: [Int]) -> Int {
-        let majCount = nums.count / 2
-        
-        func count(of candidate: Int) -> Int {
-          return nums.reduce(0) { partialResult, num in
-            if num == candidate {
-              return partialResult + 1
-            } else {
-              return partialResult
-            }
-          }
-        }
-        
-        var randomeGenerator = SystemRandomNumberGenerator()
-        
-        while true {
-          let random = nums.randomElement(using: &randomeGenerator)!
-          if count(of: random) > majCount {
-            return random
-          }
-        }
-      }
-    }
   }
 }
