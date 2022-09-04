@@ -45,3 +45,31 @@ extension Solution155 {
   }
 }
 
+extension Solution155 {
+  class S2 {
+    class MinStack {
+      var stack = [(element: Int, min: Int)]()
+      
+      init() {
+        stack.append((Int.max, Int.max))
+      }
+      
+      func push(_ val: Int) {
+        let newMin = min(stack.last!.min, val)
+        stack.append((val, newMin))
+      }
+      
+      func pop() {
+        stack.removeLast()
+      }
+      
+      func top() -> Int {
+        return stack.last!.element
+      }
+      
+      func getMin() -> Int {
+        return stack.last!.min
+      }
+    }
+  }
+}
