@@ -64,3 +64,25 @@ extension Solution704.S2 {
   }
 }
 
+extension Solution704 {
+  class S3 {
+    class Solution {
+      func search(_ nums: [Int], _ target: Int) -> Int {
+        var begin = 0
+        var end = nums.count - 1
+        while begin <= end {
+          let mid = (begin + end) / 2
+          if nums[mid] == target {
+            return mid
+          } else if target > nums[mid] {
+            begin = mid + 1
+          } else {
+            end = mid - 1
+          }
+        }
+        
+        return -1
+      }
+    }
+  }
+}
