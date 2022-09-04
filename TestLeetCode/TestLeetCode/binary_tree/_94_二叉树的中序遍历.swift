@@ -95,7 +95,7 @@ extension Solution94 {
         
         while (root != nil) {
           if (root?.left != nil) {
-            // predecessor 节点就是当前 root 节点向左走一步，然后一直向右走至无法走为止
+            // predecessor 结点就是当前 root 结点向左走一步，然后一直向右走至无法走为止
             predecessor = root?.left;
             while (predecessor?.right != nil && predecessor?.right !== root) {
               predecessor = predecessor?.right;

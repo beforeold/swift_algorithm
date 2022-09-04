@@ -1,5 +1,5 @@
 //
-//  _剑指Offer_54_二叉搜索树的第k大节点.swift
+//  _剑指Offer_54_二叉搜索树的第k大结点.swift
 //  TestLeetCode
 //
 //  Created by beforeold on 2022/9/3.
