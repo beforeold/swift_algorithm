@@ -98,11 +98,25 @@
 				943420CF28C46D4D00FB4183 /* _20_有效的括号.swift */,
 				943420D328C479FA00FB4183 /* _232_用栈实现队列.swift */,
 				943420D528C47C2E00FB4183 /* _155_最小栈.swift */,
-				943420D728C4A68100FB4183 /* _1_两数之和.swift */,
-				943420D928C4A8EB00FB4183 /* _169_多数元素.swift */,
-				943420DB28C4BBA300FB4183 /* _415_字符串相加.swift */,
 			);
 			path = stack_queue;
+			sourceTree = "<group>";
+		};
+		943420DD28C4CB7A00FB4183 /* hash_table */ = {
+			isa = PBXGroup;
+			children = (
+				943420D728C4A68100FB4183 /* _1_两数之和.swift */,
+				943420D928C4A8EB00FB4183 /* _169_多数元素.swift */,
+			);
+			path = hash_table;
+			sourceTree = "<group>";
+		};
+		943420DE28C4CB8D00FB4183 /* string */ = {
+			isa = PBXGroup;
+			children = (
+				943420DB28C4BBA300FB4183 /* _415_字符串相加.swift */,
+			);
+			path = string;
 			sourceTree = "<group>";
 		};
 		94E1DC7C28C24DF7009529BE /* array */ = {
@@ -173,6 +187,8 @@
 				94E1DC7D28C24E02009529BE /* linked_list */,
 				94E1DC8028C24E55009529BE /* binary_tree */,
 				943420D228C4780000FB4183 /* stack_queue */,
+				943420DD28C4CB7A00FB4183 /* hash_table */,
+				943420DE28C4CB8D00FB4183 /* string */,
 			);
 			path = TestLeetCode;
 			sourceTree = "<group>";
