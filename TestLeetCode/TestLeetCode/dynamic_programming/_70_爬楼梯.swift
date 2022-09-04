@@ -17,11 +17,31 @@ extension Solution70 {
   class S1 {
     class Solution {
       func climbStairs(_ n: Int) -> Int {
-        if n < 3 { return n }
+        if n <= 3 { return n }
         
         let n_1 = climbStairs(n - 1);
         let n_2 = climbStairs(n - 2);
         return n_1 + n_2
+      }
+    }
+  }
+}
+
+extension Solution70 {
+  class S2 {
+    class Solution {
+      func climbStairs(_ n: Int) -> Int {
+        if n <= 2 { return n }
+        
+        var dp = [Int](repeating: 0, count: n + 1)
+        dp[0] = 0
+        dp[1] = 1
+        dp[2] = 2
+        
+        for i in 3...n {
+          dp[i] = dp[i - 1] + dp[i - 2]
+        }
+        return dp[n]
       }
     }
   }
