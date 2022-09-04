@@ -36,3 +36,27 @@ extension Solution136 {
     }
   }
 }
+
+extension Solution136 {
+  class S2 {
+    class Solution {
+      func singleNumber(_ nums: [Int]) -> Int {
+        return nums.reduce(0, ^)
+      }
+    }
+  }
+}
+
+extension Solution136 {
+  class S3 {
+    class Solution {
+      func singleNumber(_ nums: [Int]) -> Int {
+        var ret = 0
+        for x in nums {
+          ret ^= x
+        }
+        return ret
+      }
+    }
+  }
+}
