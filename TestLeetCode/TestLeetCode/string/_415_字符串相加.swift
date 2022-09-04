@@ -83,7 +83,7 @@ extension Solution415 {
         
         var result = [Int]()
         
-        while index1 >= 0 || index2 >= 0 || add >= 0 {
+        while index1 >= 0 || index2 >= 0 || add > 0 {
           let v1 = int(index: index1, list1)
           let v2 = int(index: index2, list2)
           let sum = v1 + v2 + add
