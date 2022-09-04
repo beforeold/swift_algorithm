@@ -30,3 +30,30 @@ extension Solution226 {
     }
   }
 }
+
+extension Solution226 {
+  class S2 {
+    class Solution {
+      func invertTree(_ root: TreeNode?) -> TreeNode? {
+        guard let root = root else { return nil }
+        
+        var queue = [TreeNode]()
+        queue.append(root)
+        while !queue.isEmpty {
+          let popped = queue.removeFirst()
+          if let left = popped.left {
+            queue.append(left)
+          }
+          
+          if let right = popped.right {
+            queue.append(right)
+          }
+          
+          (popped.left, popped.right) = (popped.right, popped.right)
+          
+        }
+        return root
+      }
+    }
+  }
+}
