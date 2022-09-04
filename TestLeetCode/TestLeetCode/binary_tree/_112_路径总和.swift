@@ -29,3 +29,42 @@ extension Solution112 {
     }
   }
 }
+
+extension Solution112 {
+  class S2 {
+    class Solution {
+      func hasPathSum(_ root: TreeNode?, _ targetSum: Int) -> Bool {
+        guard let root = root else { return false }
+        
+        var queue = [TreeNode]()
+        queue.append(root)
+        
+        var sumQueue = [Int]()
+        sumQueue.append(root.val)
+        
+        
+        while !queue.isEmpty {
+          let popped = queue.removeFirst()
+          let curSum = sumQueue.removeFirst()
+          
+          if popped.left == nil && popped.right == nil {
+            if curSum == targetSum {
+              return true
+            } else {
+              continue
+            }
+          }
+          if let left = popped.left {
+            queue.append(left)
+            sumQueue.append(curSum + left.val)
+          }
+          if let right = popped.right {
+            queue.append(right)
+            sumQueue.append(curSum + right.val)
+          }
+        }
+        return false
+      }
+    }
+  }
+}
