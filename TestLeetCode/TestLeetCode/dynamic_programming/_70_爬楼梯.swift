@@ -58,7 +58,6 @@ extension Solution70 {
           p = q
           q = r
           r = p + q
-          print("rvalue: ", r)
         }
         return r
       }
