@@ -64,6 +64,8 @@ Solution415.S2.test()
 Solution704.S2.test()
 
 Solution53.S1.test()
+Solution53.S2.test()
+Solution53.S3.test()
 
 Solution70.S1.test()
 Solution70.S3.test()

@@ -41,3 +41,66 @@ extension Solution53.S1 {
     assert(Solution().maxSubArray(list) == 3)
   }
 }
+
+
+extension Solution53 {
+  class S2 {
+    class Solution {
+      /// 参考解释
+      /// https://leetcode.cn/problems/maximum-subarray/solution/53zui-da-zi-xu-he-swift-by-cobbly/
+      func maxSubArray(_ nums: [Int]) -> Int {
+        guard nums.count > 0 else { return 0}
+        
+        var dp = [Int](repeating: 0, count: nums.count)
+        dp[0] = nums[0]
+        var curMax = nums[0]
+        
+        for i in 1..<nums.count {
+          let cur = nums[i] + max(dp[i - 1], 0)
+          dp[i] = cur
+          curMax = max(cur, curMax)
+        }
+        
+        return curMax
+      }
+    }
+  }
+}
+
+extension Solution53.S2 {
+  static func test() {
+    let list = [1, 2]
+    assert(Solution().maxSubArray(list) == 3)
+  }
+}
+
+
+
+extension Solution53 {
+  class S3 {
+    class Solution {
+      /// 参考解释
+      /// https://leetcode.cn/problems/maximum-subarray/solution/53zui-da-zi-xu-he-swift-by-cobbly/
+      func maxSubArray(_ nums: [Int]) -> Int {
+        guard nums.count > 0 else { return 0}
+        
+        var allMax = nums[0]
+        var dp = nums[0]
+        
+        for i in 1..<nums.count {
+          dp =  nums[i] + max(dp, 0)
+          allMax = max(dp, allMax)
+        }
+        
+        return allMax
+      }
+    }
+  }
+}
+
+extension Solution53.S3 {
+  static func test() {
+    let list = [1, 2]
+    assert(Solution().maxSubArray(list) == 3)
+  }
+}
