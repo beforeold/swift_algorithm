@@ -56,10 +56,8 @@ extension Solution94 {
     
     class Solution {
       func inorderTraversal(_ root: TreeNode?) -> [Int] {
-        if root == nil { return [] }
-        
         var stack = [TreeNode]()
-        var result = [Int]()
+        var ret = [Int]()
         var node = root
         
         while node != nil || !stack.isEmpty {
@@ -68,11 +66,11 @@ extension Solution94 {
             node = node?.left
           }
           node = stack.removeLast()
-          result.append(node!.val)
+          ret.append(node!.val)
           node = node?.right
         }
         
-        return result
+        return ret
       }
     }
   }
