@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol Heap {
-  associatedtype Element: Comparable
+  associatedtype Element
   
   /// get size of the heap
   ///
@@ -52,13 +52,13 @@ public func HeapMinRootComparator<Element: Comparable>(_ e1: Element, _ e2: Elem
   return -HeapMaxRootComparator(e1, e2)
 }
 
-public class BinaryHeap<Element: Comparable>: Heap {
+public class BinaryHeap<Element>: Heap {
   public private(set) var size: Int
   fileprivate var container = [Element?]()
   private let comparator: (_ e1: Element, _ e2: Element) -> Int
   
   public init(array: [Element] = [],
-              comparator: @escaping (_ e1: Element, _ e2: Element) -> Int = HeapMaxRootComparator) {
+              comparator: @escaping (_ e1: Element, _ e2: Element) -> Int) {
     self.container = array
     self.size = array.count
     self.comparator = comparator
@@ -216,6 +216,13 @@ public class BinaryHeap<Element: Comparable>: Heap {
     if isEmpty {
       fatalError("the heap is empty")
     }
+  }
+}
+
+extension BinaryHeap where Element: Comparable {
+  /// to support MaxRoot for comparable
+  public convenience init(array: [Element] = []) {
+    self.init(array: array, comparator: HeapMaxRootComparator)
   }
 }
 
