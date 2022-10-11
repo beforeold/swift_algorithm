@@ -226,9 +226,16 @@ extension Array where Element: Comparable {
   }
 }
 
+
+/// 利用小顶堆进行过滤实现
+///
+/// 返回的数组是**没有**排序的
+///
+/// - Complexity: O(nlogk)，空间复杂度 O(k)
 func minRoot_topK(of array: [Int], k: Int) -> [Int] {
   let heap = BinaryHeap<Int>(comparator: HeapMinRootComparator)
   
+  // O(n * logk)
   for element in array {
     if heap.size < k {
       heap.add(element)
@@ -242,12 +249,20 @@ func minRoot_topK(of array: [Int], k: Int) -> [Int] {
   return Array(heap)
 }
 
+
+/// 利用大顶堆批量建堆后，逐个 remove 实现
+///
+/// 返回的数组是排序的，时间复杂度相对较差
+///
+/// - Complexity: 时间复杂度 O(n + klogn)，空间复杂度 O(n + k)
 func maxRoot_topK(of array: [Int], k: Int) -> [Int] {
+  // O(n)
   let heap = BinaryHeap<Int>(array: array)
   
   var ret = [Int]()
   let size = min(heap.size, k)
   
+  // O(k * logn)
   for _ in 0..<size {
     ret.append(heap.remove())
   }
