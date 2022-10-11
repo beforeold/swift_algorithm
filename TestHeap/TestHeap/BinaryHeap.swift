@@ -262,6 +262,7 @@ func minRoot_topK(of array: [Int], k: Int) -> [Int] {
 /// 返回的数组是排序的，时间复杂度相对较差
 ///
 /// - Complexity: 时间复杂度 O(n + klogn)，空间复杂度 O(n + k)
+/// - Important: 需要考虑建堆的空间复杂度
 func maxRoot_topK(of array: [Int], k: Int) -> [Int] {
   // O(n)
   let heap = BinaryHeap<Int>(array: array)
@@ -275,4 +276,68 @@ func maxRoot_topK(of array: [Int], k: Int) -> [Int] {
   }
   
   return ret
+}
+
+fileprivate class TopK {
+  /// 全手工实现 maxRoot_topK(of:k:) 方法，不导入外部的 Heap 结构
+  ///
+  /// 返回的数组是排序的，时间复杂度相对较差
+  ///
+  /// - Complexity: 时间复杂度 O(n + klogn)，空间复杂度 O(n)
+  /// - Important: 需要考虑建堆的空间复杂度
+  func maxRoot_topK_2(of array: [Int], k: Int) -> [Int] {
+    guard array.count >= k else {
+      return array
+    }
+    
+    var array = array
+    heapify(&array)
+    
+    var size = array.count
+    for _ in 0..<k {
+      array.swapAt(0, size - 1)
+      
+      size -= 1
+      siftDown(0, array: &array, size: size)
+    }
+    
+    return array
+  }
+  
+  private func heapify(_ array: inout [Int]) {
+    let size = array.count
+    let half = size / 2
+    
+    for index in (0..<half).reversed() {
+      siftDown(index, array: &array, size: size)
+    }
+  }
+  
+  /// 只有非叶子结点需要下滤
+  private func siftDown(_ index: Int,
+                        array: inout [Int],
+                        size: Int) {
+    let indexValue = array[index]
+    let half = size / 2
+    var index = index
+    while index < half {
+      var childIndex = 2 * index + 1
+      var childValue = array[childIndex]
+      
+      let rightIndex = childIndex + 1
+      if rightIndex < size {
+        let rightValue = array[rightIndex]
+        if rightValue > childValue {
+          childValue = rightValue
+          childIndex = rightIndex
+        }
+      }
+      
+      if indexValue > childIndex { break }
+      
+      array[index] = childValue
+      index = childIndex
+    }
+    array[index] = indexValue
+  }
 }
