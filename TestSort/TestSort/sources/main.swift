@@ -51,3 +51,22 @@ testQuickSort(array: [5, 4, 2, 1, 3, 8])
 var list = [5, 3, 2, 1, 6, 8, 4, 9, 7]
 QuickSorter.sort(&list)
 assert(list == [1, 2, 3, 4, 5, 6, 7, 8, 9])
+
+
+do {
+  var array = [3, 4, 2, 8, 5]
+  HeapSorter.sort(&array)
+  assert(array == [2, 3, 4, 5, 8])
+}
+
+do {
+  var array = [8, 4]
+  HeapSorter.sort(&array)
+  assert(array == [4, 8])
+}
+
+do {
+  var array = [4]
+  HeapSorter.sort(&array)
+  assert(array == [4])
+}

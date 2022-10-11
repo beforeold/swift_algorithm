@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94ADEF0628F5A2E80072D5FF /* HeapSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ADEF0528F5A2E80072D5FF /* HeapSorter.swift */; };
 		94C3677B28B3B99B00B8B155 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C3677A28B3B99B00B8B155 /* main.swift */; };
 		94C3678228B3B9AA00B8B155 /* Sorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C3678128B3B9AA00B8B155 /* Sorter.swift */; };
 		94C3678728B3BC1000B8B155 /* DataStructure in Frameworks */ = {isa = PBXBuildFile; productRef = 94C3678628B3BC1000B8B155 /* DataStructure */; };
@@ -30,6 +31,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		94ADEF0528F5A2E80072D5FF /* HeapSorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeapSorter.swift; sourceTree = "<group>"; };
 		94C3677728B3B99B00B8B155 /* TestSort */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestSort; sourceTree = BUILT_PRODUCTS_DIR; };
 		94C3677A28B3B99B00B8B155 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		94C3678128B3B9AA00B8B155 /* Sorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorter.swift; sourceTree = "<group>"; };
@@ -61,7 +63,9 @@
 				94C3677828B3B99B00B8B155 /* Products */,
 				94C3678528B3BC1000B8B155 /* Frameworks */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		94C3677828B3B99B00B8B155 /* Products */ = {
 			isa = PBXGroup;
@@ -112,6 +116,7 @@
 				94C3678D28B3D43900B8B155 /* BubbleSort3.swift */,
 				94C3679028B4A5BF00B8B155 /* QuickSort.swift */,
 				94FC038B28C19CFE0080D5A3 /* QuickSorter.swift */,
+				94ADEF0528F5A2E80072D5FF /* HeapSorter.swift */,
 			);
 			path = sorters;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 				94C3678C28B3D39B00B8B155 /* BubbleSort2.swift in Sources */,
 				94C3677B28B3B99B00B8B155 /* main.swift in Sources */,
 				94FC038C28C19CFE0080D5A3 /* QuickSorter.swift in Sources */,
+				94ADEF0628F5A2E80072D5FF /* HeapSorter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
