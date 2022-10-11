@@ -36,8 +36,8 @@ public protocol Heap {
   func replace(_ element: Element) -> Element
 }
 
-
-public func HeapDefaultComparator<Element: Comparable>(_ e1: Element, _ e2: Element) -> Int {
+/// 大顶堆比较器
+public func HeapMaxRootComparator<Element: Comparable>(_ e1: Element, _ e2: Element) -> Int {
   if e1 < e2 {
     return -1
   }
@@ -47,13 +47,18 @@ public func HeapDefaultComparator<Element: Comparable>(_ e1: Element, _ e2: Elem
   return 0
 }
 
+/// 小顶堆比较器
+public func HeapMinRootComparator<Element: Comparable>(_ e1: Element, _ e2: Element) -> Int {
+  return -HeapMaxRootComparator(e1, e2)
+}
+
 public class BinaryHeap<Element: Comparable>: Heap {
   public private(set) var size: Int
   private var container = [Element?]()
   private let comparator: (_ e1: Element, _ e2: Element) -> Int
   
   public init(array: [Element] = [],
-              comparator: @escaping (_ e1: Element, _ e2: Element) -> Int = HeapDefaultComparator) {
+              comparator: @escaping (_ e1: Element, _ e2: Element) -> Int = HeapMaxRootComparator) {
     self.container = array
     self.size = array.count
     self.comparator = comparator
