@@ -37,7 +37,7 @@ public protocol Heap {
 }
 
 /// 大顶堆比较器
-public func HeapMaxRootComparator<Element: Comparable>(_ e1: Element, _ e2: Element) -> Int {
+public func MaxFirstComparator<Element: Comparable>(_ e1: Element, _ e2: Element) -> Int {
   if e1 < e2 {
     return -1
   }
@@ -48,8 +48,8 @@ public func HeapMaxRootComparator<Element: Comparable>(_ e1: Element, _ e2: Elem
 }
 
 /// 小顶堆比较器
-public func HeapMinRootComparator<Element: Comparable>(_ e1: Element, _ e2: Element) -> Int {
-  return -HeapMaxRootComparator(e1, e2)
+public func MinFirstComparator<Element: Comparable>(_ e1: Element, _ e2: Element) -> Int {
+  return -MaxFirstComparator(e1, e2)
 }
 
 public class BinaryHeap<Element>: Heap {
@@ -222,7 +222,7 @@ public class BinaryHeap<Element>: Heap {
 extension BinaryHeap where Element: Comparable {
   /// to support MaxRoot for comparable
   public convenience init(array: [Element] = []) {
-    self.init(array: array, comparator: HeapMaxRootComparator)
+    self.init(array: array, comparator: MaxFirstComparator)
   }
 }
 
@@ -240,7 +240,7 @@ extension Array where Element: Comparable {
 ///
 /// - Complexity: O(nlogk)，空间复杂度 O(k)
 func minRoot_topK(of array: [Int], k: Int) -> [Int] {
-  let heap = BinaryHeap<Int>(comparator: HeapMinRootComparator)
+  let heap = BinaryHeap<Int>(comparator: MinFirstComparator)
   
   // O(n * logk)
   for element in array {
