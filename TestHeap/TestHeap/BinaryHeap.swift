@@ -100,11 +100,33 @@ public class BinaryHeap<Element: Comparable>: Heap {
                 return
             }
             
+            // swap
             container[pIndex] = iValue
             container[index] = pValue
             
             index = pIndex
         }
+    }
+    
+    private func siftUp_opt(_ index: Int) {
+        var index = index
+        let iValue = element(at: index)
+        
+        while index > 0 {
+            let pIndex = (index - 1) / 2
+            let pValue = element(at: pIndex)
+            
+            if comparator(pValue, iValue) >= 0 {
+                break
+            }
+            
+            // pass down parent value and continue
+            container[index] = pValue
+            
+            index = pIndex
+        }
+        
+        container[index] = iValue
     }
     
     private func element(at index: Int) -> Element {
