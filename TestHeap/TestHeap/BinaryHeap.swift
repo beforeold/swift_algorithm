@@ -48,12 +48,17 @@ public func HeapDefaultComparator<Element: Comparable>(_ e1: Element, _ e2: Elem
 }
 
 public class BinaryHeap<Element: Comparable>: Heap {
-  public private(set) var size: Int = 0
+  public private(set) var size: Int
   private var container = [Element?]()
   private let comparator: (_ e1: Element, _ e2: Element) -> Int
   
-  public init(comparator: @escaping (_ e1: Element, _ e2: Element) -> Int = HeapDefaultComparator) {
+  public init(array: [Element] = [],
+              comparator: @escaping (_ e1: Element, _ e2: Element) -> Int = HeapDefaultComparator) {
+    self.container = array
+    self.size = array.count
     self.comparator = comparator
+    
+    heapify()
   }
   
   public var isEmpty: Bool {
@@ -181,6 +186,25 @@ public class BinaryHeap<Element: Comparable>: Heap {
   
   private func element(at index: Int) -> Element {
     return container[index]!
+  }
+  
+  /// let container act as heap for initializer
+  private func heapify() {
+    heapify_siftDown()
+  }
+  
+  private func heapify_siftUp() {
+    for i in 0..<size {
+      siftUp(i)
+    }
+  }
+  
+  private func heapify_siftDown() {
+    // half 是非叶子结点的个数
+    let half = size / 2
+    for i in (0..<half).reversed() {
+      siftDown(i)
+    }
   }
   
   private func emptyCheck() {
