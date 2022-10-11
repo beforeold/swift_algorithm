@@ -96,7 +96,13 @@ public class BinaryHeap<Element: Comparable>: Heap {
   }
   
   public func replace(_ element: Element) -> Element {
-    fatalError()
+    emptyCheck()
+    
+    let rootValue = self.element(at: 0)
+    container[0] = element
+    siftDown(0)
+    
+    return rootValue
   }
   
   // MARK: - private
