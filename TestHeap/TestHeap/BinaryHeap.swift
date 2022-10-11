@@ -225,3 +225,32 @@ extension Array where Element: Comparable {
     self = binaryHeap.container.map { $0! }
   }
 }
+
+func minRoot_topK(of array: [Int], k: Int) -> [Int] {
+  let heap = BinaryHeap<Int>(comparator: HeapMinRootComparator)
+  
+  for element in array {
+    if heap.size < k {
+      heap.add(element)
+    } else if element > heap.get() {
+      _ = heap.replace(element)
+    } else {
+      // small element will be ignored
+    }
+  }
+  
+  return Array(heap)
+}
+
+func maxRoot_topK(of array: [Int], k: Int) -> [Int] {
+  let heap = BinaryHeap<Int>(array: array)
+  
+  var ret = [Int]()
+  let size = min(heap.size, k)
+  
+  for _ in 0..<size {
+    ret.append(heap.remove())
+  }
+  
+  return ret
+}
