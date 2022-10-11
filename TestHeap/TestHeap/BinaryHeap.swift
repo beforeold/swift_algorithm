@@ -54,7 +54,7 @@ public func HeapMinRootComparator<Element: Comparable>(_ e1: Element, _ e2: Elem
 
 public class BinaryHeap<Element: Comparable>: Heap {
   public private(set) var size: Int
-  private var container = [Element?]()
+  fileprivate var container = [Element?]()
   private let comparator: (_ e1: Element, _ e2: Element) -> Int
   
   public init(array: [Element] = [],
@@ -216,5 +216,12 @@ public class BinaryHeap<Element: Comparable>: Heap {
     if isEmpty {
       fatalError("the heap is empty")
     }
+  }
+}
+
+extension Array where Element: Comparable {
+  /// init an array from an binary heap
+  public init(_ binaryHeap: BinaryHeap<Element>) {
+    self = binaryHeap.container.map { $0! }
   }
 }
