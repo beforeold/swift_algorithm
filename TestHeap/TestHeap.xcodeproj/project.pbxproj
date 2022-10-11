@@ -46,7 +46,9 @@
 				94ADEEF928F54E4D0072D5FF /* TestHeap */,
 				94ADEEF828F54E4D0072D5FF /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		94ADEEF828F54E4D0072D5FF /* Products */ = {
 			isa = PBXGroup;
