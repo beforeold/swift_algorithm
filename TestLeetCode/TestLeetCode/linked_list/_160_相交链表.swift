@@ -72,9 +72,7 @@ extension Solution160 {
         }
         
         func hash(into hasher: inout Hasher) {
-          withUnsafePointer(to: node) { pointer in
-            hasher.combine(pointer)
-          }
+          hasher.combine(ObjectIdentifier(self.node))
         }
       }
       
